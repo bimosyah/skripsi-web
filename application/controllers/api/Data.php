@@ -3,13 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Data extends CI_Controller {	
 
-	//cek route.php untuk memanggil fungsi
-
-	public function test()
-	{
-		
-	}
-	
+	//cek route.php untuk memanggil fungsi	
 	public function insert_jumlah()
 	{
 		$result = array();
