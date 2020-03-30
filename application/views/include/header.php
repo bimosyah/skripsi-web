@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Dashboard V.1 | Kiaalap - Kiaalap Admin Template</title>
+  <title>Peramalan</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -78,9 +78,9 @@
       <div class="left-custom-menu-adp-wrap comment-scrollbar">
         <nav class="sidebar-nav left-sidebar-menu-pro">
           <ul class="metismenu" id="menu1">
-          <li>
-            <a href=""><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
-          </li>
+            <li>
+              <a href=""><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
+            </li>
           <!-- <li>
             <a href=""><span class="sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
           </li>
