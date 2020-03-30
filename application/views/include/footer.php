@@ -1,77 +1,53 @@
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.0.2
+    </div>
+  </footer>
 
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
 
-    <!-- jquery
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/vendor/jquery-1.12.4.min.js') ?>"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/wow.min.js') ?>"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/jquery-price-slider.js') ?>"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/jquery.meanmenu.js') ?>"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/owl.carousel.min.js') ?>"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/jquery.sticky.js') ?>"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/jquery.scrollUp.min.js') ?>"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/counterup/jquery.counterup.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/counterup/waypoints.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/counterup/counterup-active.js') ?>"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/scrollbar/jquery.mCustomScrollbar.concat.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/scrollbar/mCustomScrollbar-active.js') ?>"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/metisMenu/metisMenu.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/metisMenu/metisMenu-active.js') ?>"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/morrisjs/raphael-min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/morrisjs/morris.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/morrisjs/morris-active.js') ?>"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/sparkline/jquery.sparkline.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/sparkline/jquery.charts-sparkline.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/sparkline/sparkline-active.js') ?>"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/calendar/moment.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/calendar/fullcalendar.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/calendar/fullcalendar-active.js') ?>"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/plugins.js') ?>"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/main.js') ?>"></script>
-    <!-- tawk chat JS
-		============================================ -->
-    <script src="<?php echo base_url('assets/js/tawk-chat.js') ?>"></script>
-        <!-- data table JS
-        ============================================ -->
-    <script src="<?php echo base_url('assets/js/data-table/bootstrap-table.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/tableExport.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/data-table-active.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/bootstrap-table-editable.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/bootstrap-editable.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/bootstrap-table-resizable.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/colResizable-1.5.source.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/data-table/bootstrap-table-export.js') ?>"></script>
-
+<!-- jQuery -->
+<script src="<?php echo base_url('assets/plugins/jquery/jquery.min.js') ?>"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="<?php echo base_url('assets/plugins/jquery-ui/jquery-ui.min.js') ?>"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="<?php echo base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<!-- ChartJS -->
+<script src="<?php echo base_url('assets/plugins/chart.js/Chart.min.js') ?>"></script>
+<!-- Sparkline -->
+<script src="<?php echo base_url('assets/plugins/sparklines/sparkline.js') ?>"></script>
+<!-- JQVMap -->
+<script src="<?php echo base_url('assets/plugins/jqvmap/jquery.vmap.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/plugins/jqvmap/maps/jquery.vmap.usa.js') ?>"></script>
+<!-- jQuery Knob Chart -->
+<script src="<?php echo base_url('assets/plugins/jquery-knob/jquery.knob.min.js') ?>"></script>
+<!-- daterangepicker -->
+<script src="<?php echo base_url('assets/plugins/moment/moment.min.js') ?>"></script>
+<script src="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker.js') ?>"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?php echo base_url('assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') ?>"></script>
+<!-- Summernote -->
+<script src="<?php echo base_url('assets/plugins/summernote/summernote-bs4.min.js') ?>"></script>
+<!-- overlayScrollbars -->
+<script src="<?php echo base_url('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') ?>"></script>
+<!-- AdminLTE App -->
+<script src="<?php echo base_url('assets/dist/js/adminlte.js') ?>"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="<?php echo base_url('assets/dist/js/pages/dashboard.js') ?>"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?php echo base_url('assets/dist/js/demo.js') ?>"></script>
 </body>
-
 </html>

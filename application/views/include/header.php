@@ -1,190 +1,111 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Peramalan</title>
-  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-      ============================================ -->
-      <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/img/favicon.ico') ?>">
-    <!-- Google Fonts
-      ============================================ -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
-    <!-- Bootstrap CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css') ?>">
-    <!-- owl.carousel CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.carousel.css') ?>">
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.theme.css') ?>">
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/owl.transitions.css') ?>">
-    <!-- animate CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css') ?>">
-    <!-- normalize CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/normalize.css') ?>">
-    <!-- meanmenu icon CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/meanmenu.min.css') ?>">
-    <!-- main CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css') ?>">
-    <!-- educate icon CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/educate-custon-icon.css') ?>">
-    <!-- morrisjs CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/morrisjs/morris.css') ?>">
-    <!-- mCustomScrollbar CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/scrollbar/jquery.mCustomScrollbar.min.css') ?>">
-    <!-- metisMenu CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/metisMenu/metisMenu.min.css') ?>">
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/metisMenu/metisMenu-vertical.css') ?>">
-    <!-- calendar CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/calendar/fullcalendar.min.css') ?>">
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/calendar/fullcalendar.print.min.css') ?>">
-    <!-- style CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>">
-    <!-- responsive CSS
-      ============================================ -->
-      <link rel="stylesheet" href="<?php echo base_url('assets/css/responsive.css') ?>">
-    <!-- modernizr JS
-      ============================================ -->
-      <script src="<?php echo base_url('assets/js/vendor/modernizr-2.8.3.min.js') ?>"></script>
-    </head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-free/css/all.min.css') ?>">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') ?>">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css') ?>">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/jqvmap/jqvmap.min.css') ?>">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/adminlte.min.css') ?>">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') ?>">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker.css') ?>">
+  <!-- summernote -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/summernote/summernote-bs4.css') ?>">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
 
-    <body>
-    <!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-  <!-- Start Left menu area -->
-  <div class="left-sidebar-pro">
-    <nav id="sidebar" class="">
-      <div class="sidebar-header">
-        <a href="index.html"><img class="main-logo" src="<?php echo base_url('assets/img/logo/logo.p') ?>ng" alt="" /></a>
-        <strong><a href="index.html"><img src="<?php echo base_url('assets/img/logo/logosn.p') ?>ng" alt="" /></a></strong>
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="<?php echo base_url('assets/') ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="#" class="d-block">Bimo</a>
+        </div>
       </div>
-      <div class="left-custom-menu-adp-wrap comment-scrollbar">
-        <nav class="sidebar-nav left-sidebar-menu-pro">
-          <ul class="metismenu" id="menu1">
-            <li>
-              <a href=""><span class="educate-icon educate-home icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
-            </li>
-          <!-- <li>
-            <a href=""><span class="sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="pages/widgets.html" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Widgets
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
           </li>
-          <li>
-            <a class="has-arrow" aria-expanded="false"><span class="icon-wrap"></span> <span class="mini-click-non">Professors</span></a>
-            <ul class="submenu-angle" aria-expanded="false">
-              <li><a title="All Professors" href="all-professors.html"><span class="mini-sub-pro">All Professors</span></a></li>
-              <li><a title="Add Professor" href="add-professor.html"><span class="mini-sub-pro">Add Professor</span></a></li>
-              <li><a title="Edit Professor" href="edit-professor.html"><span class="mini-sub-pro">Edit Professor</span></a></li>
-              <li><a title="Professor Profile" href="professor-profile.html"><span class="mini-sub-pro">Professor Profile</span></a></li>
+          <li class="nav-header">EXAMPLES</li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-envelope"></i>
+              <p>
+                Mailbox
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inbox</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/compose.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Read</p>
+                </a>
+              </li>
             </ul>
-          </li>       -->   
+          </li>
         </ul>
       </nav>
+      <!-- /.sidebar-menu -->
     </div>
-  </nav>
-</div>
-<!-- End Left menu area -->
-<!-- Start Welcome area -->
-<div class="all-content-wrapper">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="logo-pro">
-          <a href="index.html"><img class="main-logo" src="<?php echo base_url('assets/img/logo/logo.p') ?>ng" alt="" /></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="header-advance-area">
-    <div class="header-top-area">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="header-top-wraper">
-              <div class="row">
-                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
-                  <div class="menu-switcher-pro">
-                    <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
-                     <i class="educate-icon educate-nav"></i>
-                   </button>
-                 </div>
-               </div>
-               <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
-                <div class="header-top-menu tabl-d-n">
-                  <ul class="nav navbar-nav mai-top-nav">
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                <div class="header-right-info">
-                  <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                    <li class="nav-item">
-                      <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                       <img src="<?php echo base_url('assets/img/product/pro4.j') ?>pg" alt="" />
-                       <span class="admin-name">Prof.Anderson</span>
-                       <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
-                     </a>
-                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                      <li><a href="#"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
-                      </li>
-                    </ul>
-                  </li>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
-</div>
-</div>
-<!-- Mobile Menu start -->
-<div class="mobile-menu-area">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="mobile-menu">
-          <nav id="dropdown">
-            <ul class="mobile-menu-nav">
-              <li><a href="">Dashboard</a></li>
-              <!-- <li><a href="">Event</a></li>
-              <li><a data-toggle="collapse" data-target="#demoevent" href="#">Professors <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                <ul id="demoevent" class="collapse dropdown-header-top">
-                  <li><a href="all-professors.html">All Professors</a>
-                  </li>
-                  <li><a href="add-professor.html">Add Professor</a>
-                  </li>
-                  <li><a href="edit-professor.html">Edit Professor</a>
-                  </li>
-                  <li><a href="professor-profile.html">Professor Profile</a>
-                  </li>
-                </ul>
-              </li> -->
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
+    <!-- /.sidebar -->
+  </aside>
