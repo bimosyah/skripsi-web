@@ -68,20 +68,19 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="<?php echo base_url() ?>" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
+                Dashboard
               </p>
             </a>
           </li>
-          <li class="nav-header">EXAMPLES</li>
+          <li class="nav-header">DATA</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
+              <i class="nav-icon fas fa-server"></i>
               <p>
-                Mailbox
+                Data
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
