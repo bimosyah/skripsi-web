@@ -56,30 +56,36 @@
 <script>
   var data = null;
   $(function () {
-    $("#jsGrid1").jsGrid({
-      width: "100%",
-      height: "auto",
+      // The Calender
+      $('#calendar').datetimepicker({
+        format: 'L',
+        inline: true
+      })
 
-      autoload:   true,
-      paging:     true,
-      sorting: true,
+      $("#jsGrid1").jsGrid({
+        width: "100%",
+        height: "auto",
 
-      controller: {
-        loadData: function(filter) {
-          return $.ajax({
-            url: "<?php echo base_url('api/data/load_data') ?>",
-            dataType: "json"
-          });
-        }
-      },
-      fields: [
-      {name: "id", width: 50},
-      {name: "jumlah", width: 100},
-      {name: "create_at", width: 100}
-      ]
+        autoload:   true,
+        paging:     true,
+        sorting: true,
+
+        controller: {
+          loadData: function(filter) {
+            return $.ajax({
+              url: "<?php echo base_url('api/data/load_data') ?>",
+              dataType: "json"
+            });
+          }
+        },
+        fields: [
+        {name: "id", width: 50},
+        {name: "jumlah", width: 100},
+        {name: "create_at", width: 100}
+        ]
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
