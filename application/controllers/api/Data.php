@@ -36,6 +36,7 @@ class Data extends CI_Controller {
 	public function load_data()
 	{
 		$data = $this->db->get('table_data')->result();
+		header('Content-Type: application/json');
 		echo json_encode($data);
 	}
 

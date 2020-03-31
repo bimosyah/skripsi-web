@@ -54,21 +54,29 @@
 <script src="<?php echo base_url('assets/plugins/jsgrid/jsgrid.min.js') ?>"></script>
 <!-- page script -->
 <script>
+  var data = null;
   $(function () {
     $("#jsGrid1").jsGrid({
-        height: "100%",
-        width: "100%",
- 
-        sorting: true,
-        paging: true,
- 
-        data: db.clients,
- 
-        fields: [
-            { name: "Name", type: "text", width: 150 },
-            { name: "Age", type: "number", width: 50 },
-            { name: "Address", type: "text", width: 200 }
-        ]
+      width: "100%",
+      height: "auto",
+
+      autoload:   true,
+      paging:     true,
+      sorting: true,
+
+      controller: {
+        loadData: function(filter) {
+          return $.ajax({
+            url: "<?php echo base_url('api/data/load_data') ?>",
+            dataType: "json"
+          });
+        }
+      },
+      fields: [
+      {name: "id", width: 50},
+      {name: "jumlah", width: 100},
+      {name: "create_at", width: 100}
+      ]
     });
   });
 </script>

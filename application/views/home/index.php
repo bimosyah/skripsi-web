@@ -23,7 +23,7 @@
         <div class="col-lg-7">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Sales</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Data Kendaraan</h3>
             </div>
             <div class="card-body">
               <div id="jsGrid1"></div>
