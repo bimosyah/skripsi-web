@@ -33,6 +33,12 @@ class Data extends CI_Controller {
 		}
 	}
 
+	public function load_data()
+	{
+		$data = $this->db->get('table_data')->result();
+		echo json_encode($data);
+	}
+
 	//cek route.php untuk memanggil fungsi
 	public function insert_alpha()
 	{

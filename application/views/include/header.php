@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/daterangepicker/daterangepicker.css') ?>">
   <!-- summernote -->
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/summernote/summernote-bs4.css') ?>">
+    <!-- jsGrid -->
+  <link rel="stylesheet" href="<?php  echo base_url('assets/plugins/jsgrid/jsgrid.min.css') ?>">
+  <link rel="stylesheet" href="<?php  echo base_url('assets/plugins/jsgrid/jsgrid-theme.min.css') ?>">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>

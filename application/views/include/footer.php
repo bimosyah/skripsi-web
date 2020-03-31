@@ -46,8 +46,32 @@
 <!-- AdminLTE App -->
 <script src="<?php echo base_url('assets/dist/js/adminlte.js') ?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?php echo base_url('assets/dist/js/pages/dashboard.js') ?>"></script>
+<!-- <script src="<?php echo base_url('assets/dist/js/pages/dashboard.js') ?>"></script> -->
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/dist/js/demo.js') ?>"></script>
+<!-- jsGrid -->
+<script src="<?php echo base_url('assets/plugins/jsgrid/demos/db.js') ?>"></script>
+<script src="<?php echo base_url('assets/plugins/jsgrid/jsgrid.min.js') ?>"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#jsGrid1").jsGrid({
+        height: "100%",
+        width: "100%",
+ 
+        sorting: true,
+        paging: true,
+ 
+        data: db.clients,
+ 
+        fields: [
+            { name: "Name", type: "text", width: 150 },
+            { name: "Age", type: "number", width: 50 },
+            { name: "Address", type: "text", width: 200 }
+        ]
+    });
+  });
+</script>
+
 </body>
 </html>
