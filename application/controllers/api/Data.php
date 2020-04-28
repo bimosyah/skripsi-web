@@ -4,11 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Data extends CI_Controller {	
 
 	//cek route.php untuk memanggil fungsi	
-	public function insert_jumlah()
+	public function insert_jumlah($jumlah_data = null)
 	{
 		$result = array();
 
-		$jumlah = $this->input->post('jumlah');
+		$jumlah = ($jumlah_data == null ? $this->input->post('jumlah') : $jumlah_data);
+
 		if ($jumlah != "") {
 			$query = $this->db->insert('table_data', array('jumlah' => $jumlah));
 			if ($query) {
