@@ -9,6 +9,12 @@ class MDataDeteksi extends CI_Model {
 		return $query;
 	}	
 
+	function save($object)
+	{
+		$query = $this->db->insert('table_data_deteksi', $object);
+		return $query;
+	}
+
 }
 
 /* End of file MDataDeteksi.php */

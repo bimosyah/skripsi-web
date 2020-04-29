@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Apr 2020 pada 17.49
+-- Waktu pembuatan: 29 Apr 2020 pada 05.28
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -105,8 +105,16 @@ CREATE TABLE `table_data_deteksi` (
   `jumlah_bicycle` int(11) NOT NULL,
   `jumlah_car` int(11) NOT NULL,
   `jumlah_motorbike` int(11) NOT NULL,
-  `timestamp` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `table_data_deteksi`
+--
+
+INSERT INTO `table_data_deteksi` (`id`, `jumlah_person`, `jumlah_bicycle`, `jumlah_car`, `jumlah_motorbike`, `timestamp`) VALUES
+(1, 1, 1, 1, 1, '0000-00-00 00:00:00'),
+(2, 1, 1, 1, 1, '2020-04-29 03:27:39');
 
 -- --------------------------------------------------------
 
@@ -177,7 +185,7 @@ ALTER TABLE `table_data`
 -- AUTO_INCREMENT untuk tabel `table_data_deteksi`
 --
 ALTER TABLE `table_data_deteksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `table_kategori`
