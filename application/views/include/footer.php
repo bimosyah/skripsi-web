@@ -21,28 +21,6 @@
   $(function () {
     $("#table_kategori").DataTable();
     $("#table_data_deteksi").DataTable();
-    $("#jsGrid1").jsGrid({
-      width: "100%",
-      height: "auto",
-
-      autoload:   true,
-      paging:     true,
-      sorting: true,
-
-      controller: {
-        loadData: function(filter) {
-          return $.ajax({
-            url: "<?php echo base_url('api/data/load_data') ?>",
-            dataType: "json"
-          });
-        }
-      },
-      fields: [
-      {name: "id", width: 50},
-      {name: "jumlah", width: 100},
-      {name: "create_at", width: 100}
-      ]
-    });
   });
 </script>
 
