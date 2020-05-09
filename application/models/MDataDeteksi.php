@@ -15,6 +15,12 @@ class MDataDeteksi extends CI_Model {
 		return $query;
 	}
 
+	function view_jumlah_per_hari()
+	{
+		$query = $this->db->get('view_jumlah_per_hari')->result();
+		return $query;
+	}
+
 }
 
 /* End of file MDataDeteksi.php */
