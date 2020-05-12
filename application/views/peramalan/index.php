@@ -4,13 +4,13 @@
   <div class="content-header">
     <div class="container-fluid">      
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Hasil Peramalan</h3>
             </div>
             <div class="card-body">
-
+              <?php $this->load->view('peramalan/mape'); ?>
             </div>
           </div>
         </div>

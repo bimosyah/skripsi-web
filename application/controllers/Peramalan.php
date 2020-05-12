@@ -16,6 +16,7 @@ class Peramalan extends CI_Controller {
 		$alphas = $this->getAlpha();
 		
 		$result = array();
+		$result_forecast = array();
 
 		foreach ($alphas as $value) {
 			$smoothing1 = $this->smoothing1($raw_datas, $value->nilai_alpha);
@@ -32,8 +33,17 @@ class Peramalan extends CI_Controller {
 				'forecast' => $forecast
 			);
 
+			$temp2 = array(
+				'alpha' => $value->nilai_alpha,
+				'forecast' => $forecast
+			);
+
 			array_push($result, $temp);
+			array_push($result_forecast, $temp2);
 		}
+
+
+		$data['result_forecast'] = $result_forecast;
 
 		$data['alpha1'] = $result[0];
 		$data['alpha2'] = $result[1];
@@ -57,6 +67,7 @@ class Peramalan extends CI_Controller {
 		$alphas = $this->getAlpha();
 		
 		$result = array();
+		$result_forecast = array();
 
 		foreach ($alphas as $value) {
 			$smoothing1 = $this->smoothing1($raw_datas, $value->nilai_alpha);
@@ -73,10 +84,20 @@ class Peramalan extends CI_Controller {
 				'forecast' => $forecast
 			);
 
+			$temp2 = array(
+				'alpha' => $value->nilai_alpha,
+				'forecast' => $forecast
+			);
+
+			array_push($result_forecast, $temp2);
+
 			array_push($result, $temp);
 		}
 
 		header('Content-Type: application/json');
+
+		$data['result_forecast'] = $result_forecast;
+		
 		$data['alpha1'] = $result[0];
 		$data['alpha2'] = $result[1];
 		$data['alpha3'] = $result[2];
@@ -86,7 +107,8 @@ class Peramalan extends CI_Controller {
 		$data['alpha7'] = $result[6];
 		$data['alpha8'] = $result[7];
 		$data['alpha9'] = $result[8];
-		echo json_encode($data['alpha1']);
+
+		echo json_encode($data['result_forecast']);
 	}
 
 
