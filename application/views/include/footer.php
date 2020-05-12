@@ -19,6 +19,14 @@
 	$(function () {
 		$("#table_kategori").DataTable();
 		$("#table_data_deteksi").DataTable();
+		$('#table_peramalan_detail').dataTable( {
+			"lengthChange": false,
+			"searching": false,
+			"info": false,
+			"bPaginate": false,
+			"ordering": false
+		});
+
 	});
 
 	var config = {

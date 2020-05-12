@@ -10,20 +10,83 @@ class Peramalan extends CI_Controller {
 		$this->load->model('MAlpha','alpha');
 	}
 
-
 	public function index()
 	{
 		$raw_datas = $this->getAllData();
 		$alphas = $this->getAlpha();
-		$smoothing1 = $this->smoothing1($raw_datas, 0.1);
-		$smoothing2 = $this->smoothing2($smoothing1, 0.1);
-		$konstantaA = $this->konstantaA($smoothing1,$smoothing2);
-		$konstantaB = $this->konstantaB($smoothing1,$smoothing2,0.1);
-		$forecast = $this->forecast($konstantaA, $konstantaB);
+		
+		$result = array();
+
+		foreach ($alphas as $value) {
+			$smoothing1 = $this->smoothing1($raw_datas, $value->nilai_alpha);
+			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
+			$konstantaA = $this->konstantaA($smoothing1,$smoothing2);
+			$konstantaB = $this->konstantaB($smoothing1,$smoothing2,$value->nilai_alpha);
+			$forecast = $this->forecast($konstantaA, $konstantaB);
+
+			$temp = array(
+				'smoothing1' => $smoothing1,
+				'smoothing2' => $smoothing2,
+				'konstantaA' => $konstantaA,
+				'konstantaB' => $konstantaB,
+				'forecast' => $forecast
+			);
+
+			array_push($result, $temp);
+		}
+
+		$data['alpha1'] = $result[0];
+		$data['alpha2'] = $result[1];
+		$data['alpha3'] = $result[2];
+		$data['alpha4'] = $result[3];
+		$data['alpha5'] = $result[4];
+		$data['alpha6'] = $result[5];
+		$data['alpha7'] = $result[6];
+		$data['alpha8'] = $result[7];
+		$data['alpha9'] = $result[8];
+
+		// header('Content-Type: application/json');
+		// echo json_encode($data);
+		$data['raw_data'] = $this->getAllData();
+		$this->load->view('peramalan/index', $data);
+	}
+
+	public function tes()
+	{
+		$raw_datas = $this->getAllData();
+		$alphas = $this->getAlpha();
+		
+		$result = array();
+
+		foreach ($alphas as $value) {
+			$smoothing1 = $this->smoothing1($raw_datas, $value->nilai_alpha);
+			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
+			$konstantaA = $this->konstantaA($smoothing1,$smoothing2);
+			$konstantaB = $this->konstantaB($smoothing1,$smoothing2,$value->nilai_alpha);
+			$forecast = $this->forecast($konstantaA, $konstantaB);
+
+			$temp = array(
+				'smoothing1' => $smoothing1,
+				'smoothing2' => $smoothing2,
+				'konstantaA' => $konstantaA,
+				'konstantaB' => $konstantaB,
+				'forecast' => $forecast
+			);
+
+			array_push($result, $temp);
+		}
 
 		header('Content-Type: application/json');
-		echo json_encode($forecast);
-
+		$data['alpha1'] = $result[0];
+		$data['alpha2'] = $result[1];
+		$data['alpha3'] = $result[2];
+		$data['alpha4'] = $result[3];
+		$data['alpha5'] = $result[4];
+		$data['alpha6'] = $result[5];
+		$data['alpha7'] = $result[6];
+		$data['alpha8'] = $result[7];
+		$data['alpha9'] = $result[8];
+		echo json_encode($data['alpha1']);
 	}
 
 
@@ -163,7 +226,7 @@ class Peramalan extends CI_Controller {
 		return $result;
 	}
 
-	//cek route.php untuk memanggil fungsi
+	//tidak terpakai
 	public function double_exponential()
 	{
 		//ambil data dari database
