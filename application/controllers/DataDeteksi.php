@@ -11,8 +11,14 @@ class DataDeteksi extends CI_Controller {
 
 	public function index()
 	{
+		$data['raw_data'] = $this->getAllData();
 		$data['data_deteksi'] = $this->deteksi->get();
 		$this->load->view('data_deteksi/index', $data);			
+	}
+
+	public function getAllData(){
+		$raw_data = $this->deteksi->view_jumlah_per_hari();
+		return $raw_data;
 	}
 
 }

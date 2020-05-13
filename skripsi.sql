@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Apr 2020 pada 05.57
+-- Waktu pembuatan: 13 Bulan Mei 2020 pada 12.03
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -39,59 +39,15 @@ CREATE TABLE `table_alpha` (
 --
 
 INSERT INTO `table_alpha` (`id`, `nilai_alpha`, `update_at`) VALUES
-(1, 0.2, '2020-02-16 15:38:39');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `table_data`
---
-
-CREATE TABLE `table_data` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `jumlah` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `create_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `table_data`
---
-
-INSERT INTO `table_data` (`id`, `jumlah`, `create_at`) VALUES
-(1, '12', '2020-04-28 13:50:16'),
-(2, '12', '2020-04-28 13:51:04'),
-(3, '12', '2020-04-28 13:51:11'),
-(4, '8', '2020-04-28 13:53:33'),
-(5, '5', '2020-04-28 13:53:36'),
-(6, '0', '2020-04-28 13:53:39'),
-(7, '0', '2020-04-28 13:53:42'),
-(8, '0', '2020-04-28 13:53:45'),
-(9, '0', '2020-04-28 13:53:49'),
-(10, '0', '2020-04-28 13:53:52'),
-(11, '2', '2020-04-28 13:53:55'),
-(12, '3', '2020-04-28 13:53:58'),
-(13, '0', '2020-04-28 13:54:02'),
-(14, '0', '2020-04-28 13:54:05'),
-(15, '0', '2020-04-28 13:54:08'),
-(16, '5', '2020-04-28 13:54:11'),
-(17, '8', '2020-04-28 13:54:14'),
-(18, '10', '2020-04-28 13:54:17'),
-(19, '9', '2020-04-28 13:54:20'),
-(20, '0', '2020-04-28 13:54:24'),
-(21, '0', '2020-04-28 13:54:27'),
-(22, '0', '2020-04-28 13:54:30'),
-(23, '0', '2020-04-28 13:54:33'),
-(24, '0', '2020-04-28 13:54:36'),
-(25, '0', '2020-04-28 13:54:40'),
-(26, '0', '2020-04-28 13:54:43'),
-(27, '4', '2020-04-28 13:54:46'),
-(28, '7', '2020-04-28 13:54:49'),
-(29, '0', '2020-04-28 13:54:52'),
-(30, '0', '2020-04-28 13:54:56'),
-(31, '0', '2020-04-28 13:54:59'),
-(32, '0', '2020-04-28 13:55:02'),
-(33, '0', '2020-04-28 13:55:05'),
-(34, '0', '2020-04-28 13:55:08');
+(1, 0.1, '2020-05-09 11:30:46'),
+(2, 0.2, '2020-05-09 11:31:03'),
+(3, 0.3, '2020-05-09 11:31:47'),
+(4, 0.4, '2020-05-09 11:32:27'),
+(5, 0.5, '2020-05-09 11:32:31'),
+(6, 0.6, '2020-05-09 11:33:04'),
+(7, 0.7, '2020-05-09 11:33:04'),
+(8, 0.8, '2020-05-09 11:33:18'),
+(9, 0.9, '2020-05-09 11:33:18');
 
 -- --------------------------------------------------------
 
@@ -174,7 +130,17 @@ INSERT INTO `table_data_deteksi` (`id`, `jumlah_person`, `jumlah_bicycle`, `juml
 (59, 0, 0, 0, 0, '2020-04-29 03:51:21'),
 (60, 0, 0, 0, 0, '2020-04-29 03:51:24'),
 (61, 4, 0, 0, 0, '2020-04-29 03:51:27'),
-(62, 0, 0, 0, 0, '2020-04-29 03:51:30');
+(62, 0, 0, 0, 0, '2020-04-29 03:51:30'),
+(63, 0, 3, 8, 0, '2020-04-29 04:16:38'),
+(64, 0, 8, 10, 0, '2020-04-29 04:16:41'),
+(65, 4, 1, 10, 0, '2020-04-29 04:16:44'),
+(66, 2, 6, 9, 0, '2020-04-29 04:16:47'),
+(67, 5, 7, 10, 0, '2020-04-29 04:16:50'),
+(68, 5, 2, 12, 0, '2020-04-29 04:16:53'),
+(69, 2, 0, 11, 0, '2020-04-29 04:16:56'),
+(70, 0, 5, 9, 0, '2020-04-29 04:17:00'),
+(71, 1, 9, 9, 0, '2020-04-29 04:17:03'),
+(72, 4, 0, 12, 0, '2020-04-29 04:17:06');
 
 -- --------------------------------------------------------
 
@@ -197,6 +163,29 @@ INSERT INTO `table_kategori` (`id`, `nama_kategori`) VALUES
 (3, 'car'),
 (4, 'motorbike');
 
+-- --------------------------------------------------------
+
+--
+-- Stand-in struktur untuk tampilan `view_jumlah_per_hari`
+-- (Lihat di bawah untuk tampilan aktual)
+--
+CREATE TABLE `view_jumlah_per_hari` (
+`jumlah_person` decimal(32,0)
+,`jumlah_bicycle` decimal(32,0)
+,`jumlah_car` decimal(32,0)
+,`jumlah_motorbike` decimal(32,0)
+,`tanggal` date
+);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur untuk view `view_jumlah_per_hari`
+--
+DROP TABLE IF EXISTS `view_jumlah_per_hari`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_jumlah_per_hari`  AS  select sum(`table_data_deteksi`.`jumlah_person`) AS `jumlah_person`,sum(`table_data_deteksi`.`jumlah_bicycle`) AS `jumlah_bicycle`,sum(`table_data_deteksi`.`jumlah_car`) AS `jumlah_car`,sum(`table_data_deteksi`.`jumlah_motorbike`) AS `jumlah_motorbike`,cast(`table_data_deteksi`.`timestamp` as date) AS `tanggal` from `table_data_deteksi` group by cast(`table_data_deteksi`.`timestamp` as date) ;
+
 --
 -- Indexes for dumped tables
 --
@@ -205,12 +194,6 @@ INSERT INTO `table_kategori` (`id`, `nama_kategori`) VALUES
 -- Indeks untuk tabel `table_alpha`
 --
 ALTER TABLE `table_alpha`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `table_data`
---
-ALTER TABLE `table_data`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -233,19 +216,13 @@ ALTER TABLE `table_kategori`
 -- AUTO_INCREMENT untuk tabel `table_alpha`
 --
 ALTER TABLE `table_alpha`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `table_data`
---
-ALTER TABLE `table_data`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `table_data_deteksi`
 --
 ALTER TABLE `table_data_deteksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT untuk tabel `table_kategori`

@@ -7,6 +7,37 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Jumlah Data Deteksi</h3>
+            </div>
+            <div class="card-body">
+              <table id="table_peramalan_detail" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>Tanggal</th>
+                    <th>Orang</th>
+                    <th>Sepeda</th>
+                    <th>Mobil</th>
+                    <th>Motor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($raw_data as $value): ?>
+                    <tr>
+                      <td><?php echo $value->tanggal ?></td>
+                      <td><?php echo $value->jumlah_person ?></td>
+                      <td><?php echo $value->jumlah_bicycle ?></td>
+                      <td><?php echo $value->jumlah_car ?></td>
+                      <td><?php echo $value->jumlah_motorbike ?></td>
+                    </tr>
+                  <?php endforeach ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
               <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Data Deteksi</h3>
             </div>
             <div class="card-body">
@@ -32,7 +63,7 @@
                       <th><?php echo $value->jumlah_motorbike ?></th>
                       <th><?php echo $value->timestamp ?></th>
                     </tr>
-                  <?php $no++; ?>
+                    <?php $no++; ?>
                   <?php endforeach; ?>
                 </tbody>
               </table>
