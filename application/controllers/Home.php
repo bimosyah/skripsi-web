@@ -17,6 +17,27 @@ class Home extends CI_Controller {
 		$data['jumlah_motor'] = array();
 		$data['label'] = array();
 
+		//menit 10
+		$data['jumlah_manusia_menit10'] = array();
+		$data['jumlah_sepeda_menit10'] = array();
+		$data['jumlah_mobil_menit10'] = array();
+		$data['jumlah_motor_menit10'] = array();
+		$data['label_menit10'] = array();
+
+		//menit 20
+		$data['jumlah_manusia_menit20'] = array();
+		$data['jumlah_sepeda_menit20'] = array();
+		$data['jumlah_mobil_menit20'] = array();
+		$data['jumlah_motor_menit20'] = array();
+		$data['label_menit20'] = array();
+
+		//menit30
+		$data['jumlah_manusia_menit30'] = array();
+		$data['jumlah_sepeda_menit30'] = array();
+		$data['jumlah_mobil_menit30'] = array();
+		$data['jumlah_motor_menit30'] = array();
+		$data['label_menit30'] = array();
+
 		foreach ($this->chart() as $value) {
 			array_push($data['jumlah_manusia'], $value['jumlah_manusia']);
 			array_push($data['jumlah_sepeda'], $value['jumlah_sepeda']);
@@ -25,13 +46,40 @@ class Home extends CI_Controller {
 			array_push($data['label'], $value['label']);
 		}
 
-		// $this->load->view('home/index',$data);
+		//menit10
+		foreach ($this->chart_menit($this->data_deteksi->view_jumlah_menit10()) as $value) {
+			array_push($data['jumlah_manusia_menit10'], $value['jumlah_manusia']);
+			array_push($data['jumlah_sepeda_menit10'], $value['jumlah_sepeda']);
+			array_push($data['jumlah_mobil_menit10'], $value['jumlah_mobil']);
+			array_push($data['jumlah_motor_menit10'], $value['jumlah_motor']);
+			array_push($data['label_menit10'], $value['label']);
+		}
 
-		// echo json_encode($this->chart_menit10());
+		//menit20
+		foreach ($this->chart_menit($this->data_deteksi->view_jumlah_menit20()) as $value) {
+			array_push($data['jumlah_manusia_menit20'], $value['jumlah_manusia']);
+			array_push($data['jumlah_sepeda_menit20'], $value['jumlah_sepeda']);
+			array_push($data['jumlah_mobil_menit20'], $value['jumlah_mobil']);
+			array_push($data['jumlah_motor_menit20'], $value['jumlah_motor']);
+			array_push($data['label_menit20'], $value['label']);
+		}
+
+		//menit30
+		foreach ($this->chart_menit($this->data_deteksi->view_jumlah_menit30()) as $value) {
+			array_push($data['jumlah_manusia_menit30'], $value['jumlah_manusia']);
+			array_push($data['jumlah_sepeda_menit30'], $value['jumlah_sepeda']);
+			array_push($data['jumlah_mobil_menit30'], $value['jumlah_mobil']);
+			array_push($data['jumlah_motor_menit30'], $value['jumlah_motor']);
+			array_push($data['label_menit30'], $value['label']);
+		}
+
+		$this->load->view('home/index',$data);
+
+		// echo json_encode($this->chart_menit($this->data_deteksi->view_jumlah_menit10()));
 		// echo "<br>";
-		// echo json_encode($this->chart_menit20());
+		// echo json_encode($this->chart_menit($this->data_deteksi->view_jumlah_menit20()));
 		// echo "<br>";
-		// echo json_encode($this->chart_menit30());
+		// echo json_encode($this->chart_menit($this->data_deteksi->view_jumlah_menit30()));
 		// echo "<br>";
 	}
 
@@ -55,49 +103,9 @@ class Home extends CI_Controller {
 
 	}
 
-	public function chart_menit10()
+	public function chart_menit($data)
 	{
-		$data_deteksi = $this->data_deteksi->view_jumlah_menit10();
-		$arr_chart = array();
-		foreach ($data_deteksi as $value) {
-			$arr_temp = array(
-				'jumlah_manusia' => $value->jumlah_person,
-				'jumlah_sepeda' => $value->jumlah_bicycle,
-				'jumlah_mobil' => $value->jumlah_car,
-				'jumlah_motor' => $value->jumlah_motorbike,
-				'tanggal' => $value->tanggal,
-				'jam' => $value->jam,
-				'label' => $value->tanggal,
-			);
-			array_push($arr_chart, $arr_temp);
-		}
-
-		return $arr_chart;
-	}
-
-	public function chart_menit20()
-	{
-		$data_deteksi = $this->data_deteksi->view_jumlah_menit20();
-		$arr_chart = array();
-		foreach ($data_deteksi as $value) {
-			$arr_temp = array(
-				'jumlah_manusia' => $value->jumlah_person,
-				'jumlah_sepeda' => $value->jumlah_bicycle,
-				'jumlah_mobil' => $value->jumlah_car,
-				'jumlah_motor' => $value->jumlah_motorbike,
-				'tanggal' => $value->tanggal,
-				'jam' => $value->jam,
-				'label' => $value->tanggal,
-			);
-			array_push($arr_chart, $arr_temp);
-		}
-
-		return $arr_chart;
-	}
-
-	public function chart_menit30()
-	{
-		$data_deteksi = $this->data_deteksi->view_jumlah_menit30();
+		$data_deteksi = $data;
 		$arr_chart = array();
 		foreach ($data_deteksi as $value) {
 			$arr_temp = array(

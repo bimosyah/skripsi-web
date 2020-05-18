@@ -95,36 +95,37 @@
 		}
 	};
 
+	//menit10
 	var config1 = {
 		type: 'bar',
 		data: {
-			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
+			labels: <?php echo (!isset($label_menit10) ? "[]" : json_encode($label_menit10)) ?>,
 			datasets: [{
 				label: 'Orang',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
-				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
+				data: <?php echo (!isset($jumlah_manusia_menit10) ? "[]" : json_encode($jumlah_manusia_menit10)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Sepeda',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
-				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
+				data: <?php echo (!isset($jumlah_sepeda_menit10) ? "[]" : json_encode($jumlah_sepeda_menit10)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Mobil',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
-				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
+				data: <?php echo (!isset($jumlah_mobil_menit10) ? "[]" : json_encode($jumlah_mobil_menit10)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Motor',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
-				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
+				data: <?php echo (!isset($jumlah_motor_menit10) ? "[]" : json_encode($jumlah_motor_menit10)) ?>,
 				fill: false,
 			}]
 		},
@@ -161,36 +162,37 @@
 		}
 	};
 
+	//menit20
 	var config2 = {
 		type: 'bar',
 		data: {
-			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
+			labels: <?php echo (!isset($label_menit20) ? "[]" : json_encode($label_menit20)) ?>,
 			datasets: [{
 				label: 'Orang',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
-				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
+				data: <?php echo (!isset($jumlah_manusia_menit20) ? "[]" : json_encode($jumlah_manusia_menit20)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Sepeda',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
-				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
+				data: <?php echo (!isset($jumlah_sepeda_menit20) ? "[]" : json_encode($jumlah_sepeda_menit20)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Mobil',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
-				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
+				data: <?php echo (!isset($jumlah_mobil_menit20) ? "[]" : json_encode($jumlah_mobil_menit20)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Motor',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
-				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
+				data: <?php echo (!isset($jumlah_motor_menit20) ? "[]" : json_encode($jumlah_motor_menit20)) ?>,
 				fill: false,
 			}]
 		},
@@ -227,36 +229,37 @@
 		}
 	};
 
+	//menit30
 	var config3 = {
 		type: 'bar',
 		data: {
-			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
+			labels: <?php echo (!isset($label_menit30) ? "[]" : json_encode($label_menit30)) ?>,
 			datasets: [{
 				label: 'Orang',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
-				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
+				data: <?php echo (!isset($jumlah_manusia_menit30) ? "[]" : json_encode($jumlah_manusia_menit30)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Sepeda',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
-				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
+				data: <?php echo (!isset($jumlah_sepeda_menit30) ? "[]" : json_encode($jumlah_sepeda_menit30)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Mobil',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
-				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
+				data: <?php echo (!isset($jumlah_mobil_menit30) ? "[]" : json_encode($jumlah_mobil_menit30)) ?>,
 				fill: false,
 			},
 			{
 				label: 'Motor',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
-				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
+				data: <?php echo (!isset($jumlah_motor_menit30) ? "[]" : json_encode($jumlah_motor_menit30)) ?>,
 				fill: false,
 			}]
 		},
