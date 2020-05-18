@@ -95,9 +95,214 @@
 		}
 	};
 
+	var config1 = {
+		type: 'bar',
+		data: {
+			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
+			datasets: [{
+				label: 'Orang',
+				backgroundColor: 'rgb(255, 102, 102)',
+				borderColor: 'rgb(255, 102, 102)',
+				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Sepeda',
+				backgroundColor: 'rgb(255, 178, 102)',
+				borderColor: 'rgb(255, 178, 102)',
+				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Mobil',
+				backgroundColor: 'rgb(255, 255, 102)',
+				borderColor: 'rgb(255, 255, 102)',
+				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Motor',
+				backgroundColor: 'rgb(178, 255, 102)',
+				borderColor: 'rgb(178, 255, 102)',
+				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Volume Data Jam 08.10'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Tanggal'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Value'
+					}
+				}]
+			}
+		}
+	};
+
+	var config2 = {
+		type: 'bar',
+		data: {
+			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
+			datasets: [{
+				label: 'Orang',
+				backgroundColor: 'rgb(255, 102, 102)',
+				borderColor: 'rgb(255, 102, 102)',
+				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Sepeda',
+				backgroundColor: 'rgb(255, 178, 102)',
+				borderColor: 'rgb(255, 178, 102)',
+				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Mobil',
+				backgroundColor: 'rgb(255, 255, 102)',
+				borderColor: 'rgb(255, 255, 102)',
+				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Motor',
+				backgroundColor: 'rgb(178, 255, 102)',
+				borderColor: 'rgb(178, 255, 102)',
+				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Volume Data Jam 08.20'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Tanggal'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Value'
+					}
+				}]
+			}
+		}
+	};
+
+	var config3 = {
+		type: 'bar',
+		data: {
+			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
+			datasets: [{
+				label: 'Orang',
+				backgroundColor: 'rgb(255, 102, 102)',
+				borderColor: 'rgb(255, 102, 102)',
+				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Sepeda',
+				backgroundColor: 'rgb(255, 178, 102)',
+				borderColor: 'rgb(255, 178, 102)',
+				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Mobil',
+				backgroundColor: 'rgb(255, 255, 102)',
+				borderColor: 'rgb(255, 255, 102)',
+				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
+				fill: false,
+			},
+			{
+				label: 'Motor',
+				backgroundColor: 'rgb(178, 255, 102)',
+				borderColor: 'rgb(178, 255, 102)',
+				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
+				fill: false,
+			}]
+		},
+		options: {
+			responsive: true,
+			title: {
+				display: true,
+				text: 'Volume Data Jam 08.30'
+			},
+			tooltips: {
+				mode: 'index',
+				intersect: false,
+			},
+			hover: {
+				mode: 'nearest',
+				intersect: true
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Tanggal'
+					}
+				}],
+				yAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Value'
+					}
+				}]
+			}
+		}
+	};
+
 	window.onload = function() {
 		var ctx = document.getElementById('canvas').getContext('2d');
 		window.myLine = new Chart(ctx, config);
+		var ctx1 = document.getElementById('canvas1').getContext('2d');
+		window.myLine1 = new Chart(ctx1, config1);
+		var ctx2 = document.getElementById('canvas2').getContext('2d');
+		window.myLine2 = new Chart(ctx2, config2);
+		var ctx3 = document.getElementById('canvas3').getContext('2d');
+		window.myLine3 = new Chart(ctx3, config3);
+
 	};
 
 </script>

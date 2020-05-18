@@ -17,7 +17,7 @@ class Home extends CI_Controller {
 		$data['jumlah_motor'] = array();
 		$data['label'] = array();
 
-		foreach ($this->load_chart() as $value) {
+		foreach ($this->chart() as $value) {
 			array_push($data['jumlah_manusia'], $value['jumlah_manusia']);
 			array_push($data['jumlah_sepeda'], $value['jumlah_sepeda']);
 			array_push($data['jumlah_mobil'], $value['jumlah_mobil']);
@@ -25,10 +25,17 @@ class Home extends CI_Controller {
 			array_push($data['label'], $value['label']);
 		}
 
-		$this->load->view('home/index',$data);
+		// $this->load->view('home/index',$data);
+
+		// echo json_encode($this->chart_menit10());
+		// echo "<br>";
+		// echo json_encode($this->chart_menit20());
+		// echo "<br>";
+		// echo json_encode($this->chart_menit30());
+		// echo "<br>";
 	}
 
-	public function load_chart()
+	public function chart()
 	{
 		$data_deteksi = $this->data_deteksi->view_jumlah_per_hari();
 		$arr_chart = array();
@@ -46,6 +53,66 @@ class Home extends CI_Controller {
 
 		return $arr_chart;
 
+	}
+
+	public function chart_menit10()
+	{
+		$data_deteksi = $this->data_deteksi->view_jumlah_menit10();
+		$arr_chart = array();
+		foreach ($data_deteksi as $value) {
+			$arr_temp = array(
+				'jumlah_manusia' => $value->jumlah_person,
+				'jumlah_sepeda' => $value->jumlah_bicycle,
+				'jumlah_mobil' => $value->jumlah_car,
+				'jumlah_motor' => $value->jumlah_motorbike,
+				'tanggal' => $value->tanggal,
+				'jam' => $value->jam,
+				'label' => $value->tanggal,
+			);
+			array_push($arr_chart, $arr_temp);
+		}
+
+		return $arr_chart;
+	}
+
+	public function chart_menit20()
+	{
+		$data_deteksi = $this->data_deteksi->view_jumlah_menit20();
+		$arr_chart = array();
+		foreach ($data_deteksi as $value) {
+			$arr_temp = array(
+				'jumlah_manusia' => $value->jumlah_person,
+				'jumlah_sepeda' => $value->jumlah_bicycle,
+				'jumlah_mobil' => $value->jumlah_car,
+				'jumlah_motor' => $value->jumlah_motorbike,
+				'tanggal' => $value->tanggal,
+				'jam' => $value->jam,
+				'label' => $value->tanggal,
+			);
+			array_push($arr_chart, $arr_temp);
+		}
+
+		return $arr_chart;
+	}
+
+	public function chart_menit30()
+	{
+		$data_deteksi = $this->data_deteksi->view_jumlah_menit30();
+		$arr_chart = array();
+		foreach ($data_deteksi as $value) {
+			$arr_temp = array(
+				'jumlah_manusia' => $value->jumlah_person,
+				'jumlah_sepeda' => $value->jumlah_bicycle,
+				'jumlah_mobil' => $value->jumlah_car,
+				'jumlah_motor' => $value->jumlah_motorbike,
+				'tanggal' => $value->tanggal,
+				'jam' => $value->jam,
+				'label' => $value->tanggal,
+			);
+			array_push($arr_chart, $arr_temp);
+		}
+
+		return $arr_chart;
 	}
 }
 

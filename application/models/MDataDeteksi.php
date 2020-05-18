@@ -21,6 +21,24 @@ class MDataDeteksi extends CI_Model {
 		return $query;
 	}
 
+	function view_jumlah_menit10()
+	{
+		$query = $this->db->get('view_jumlah_menit10')->result();
+		return $query;
+	}
+
+	function view_jumlah_menit20()
+	{
+		$query = $this->db->get('view_jumlah_menit20')->result();
+		return $query;
+	}
+
+	function view_jumlah_menit30()
+	{
+		$query = $this->db->get('view_jumlah_menit30')->result();
+		return $query;
+	}
+
 }
 
 /* End of file MDataDeteksi.php */
