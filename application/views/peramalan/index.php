@@ -57,55 +57,55 @@
               <div class="tab-content">
                 <div class="tab-pane active" id="a1" role="tabpanel" aria-labelledby="a1-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha1'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a2" role="tabpanel" aria-labelledby="a2-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha2'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a3" role="tabpanel" aria-labelledby="a3-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha3'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a4" role="tabpanel" aria-labelledby="a4-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha4'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a5" role="tabpanel" aria-labelledby="a5-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha5'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a6" role="tabpanel" aria-labelledby="a6-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha6'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a7" role="tabpanel" aria-labelledby="a7-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha7'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a8" role="tabpanel" aria-labelledby="a8-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha8'); ?>
                   </div>
                 </div>
                 <div class="tab-pane" id="a9" role="tabpanel" aria-labelledby="a9-tab">
                   <br>
-                  <div class="col-lg-6">
+                  <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha9'); ?>
                   </div>
                 </div>
