@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Bulan Mei 2020 pada 12.03
+-- Waktu pembuatan: 18 Bulan Mei 2020 pada 15.42
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -30,24 +30,23 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `table_alpha` (
   `id` int(1) NOT NULL,
-  `nilai_alpha` float NOT NULL,
-  `update_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `nilai_alpha` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `table_alpha`
 --
 
-INSERT INTO `table_alpha` (`id`, `nilai_alpha`, `update_at`) VALUES
-(1, 0.1, '2020-05-09 11:30:46'),
-(2, 0.2, '2020-05-09 11:31:03'),
-(3, 0.3, '2020-05-09 11:31:47'),
-(4, 0.4, '2020-05-09 11:32:27'),
-(5, 0.5, '2020-05-09 11:32:31'),
-(6, 0.6, '2020-05-09 11:33:04'),
-(7, 0.7, '2020-05-09 11:33:04'),
-(8, 0.8, '2020-05-09 11:33:18'),
-(9, 0.9, '2020-05-09 11:33:18');
+INSERT INTO `table_alpha` (`id`, `nilai_alpha`) VALUES
+(1, 0.1),
+(2, 0.2),
+(3, 0.3),
+(4, 0.4),
+(5, 0.5),
+(6, 0.6),
+(7, 0.7),
+(8, 0.8),
+(9, 0.9);
 
 -- --------------------------------------------------------
 
@@ -69,78 +68,27 @@ CREATE TABLE `table_data_deteksi` (
 --
 
 INSERT INTO `table_data_deteksi` (`id`, `jumlah_person`, `jumlah_bicycle`, `jumlah_car`, `jumlah_motorbike`, `timestamp`) VALUES
-(1, 1, 1, 1, 1, '0000-00-00 00:00:00'),
-(2, 1, 1, 1, 1, '2020-04-29 03:27:39'),
-(3, 8, 0, 0, 0, '2020-04-29 03:46:47'),
-(4, 3, 0, 0, 0, '2020-04-29 03:46:50'),
-(5, 0, 0, 0, 0, '2020-04-29 03:46:54'),
-(6, 0, 0, 0, 0, '2020-04-29 03:46:56'),
-(7, 1, 0, 0, 0, '2020-04-29 03:46:59'),
-(8, 0, 0, 0, 0, '2020-04-29 03:47:02'),
-(9, 0, 0, 0, 0, '2020-04-29 03:47:06'),
-(10, 1, 0, 0, 0, '2020-04-29 03:47:09'),
-(11, 0, 0, 0, 0, '2020-04-29 03:47:12'),
-(12, 0, 0, 0, 0, '2020-04-29 03:47:15'),
-(13, 5, 0, 1, 0, '2020-04-29 03:48:56'),
-(14, 9, 0, 8, 0, '2020-04-29 03:48:59'),
-(15, 12, 0, 8, 1, '2020-04-29 03:49:02'),
-(16, 5, 0, 7, 1, '2020-04-29 03:49:05'),
-(17, 7, 0, 8, 0, '2020-04-29 03:49:08'),
-(18, 12, 0, 9, 4, '2020-04-29 03:49:11'),
-(19, 11, 0, 11, 0, '2020-04-29 03:49:14'),
-(20, 9, 0, 11, 6, '2020-04-29 03:49:18'),
-(21, 3, 0, 3, 1, '2020-04-29 03:49:21'),
-(22, 0, 0, 0, 0, '2020-04-29 03:49:24'),
-(23, 0, 0, 0, 0, '2020-04-29 03:49:27'),
-(24, 0, 0, 0, 0, '2020-04-29 03:49:30'),
-(25, 0, 0, 0, 0, '2020-04-29 03:49:34'),
-(26, 0, 0, 0, 0, '2020-04-29 03:49:37'),
-(27, 0, 0, 0, 0, '2020-04-29 03:49:40'),
-(28, 0, 0, 0, 0, '2020-04-29 03:49:43'),
-(29, 0, 0, 12, 0, '2020-04-29 03:49:46'),
-(30, 0, 0, 6, 0, '2020-04-29 03:49:50'),
-(31, 0, 0, 4, 0, '2020-04-29 03:49:53'),
-(32, 0, 0, 8, 0, '2020-04-29 03:49:56'),
-(33, 0, 0, 2, 0, '2020-04-29 03:49:59'),
-(34, 0, 0, 0, 0, '2020-04-29 03:50:02'),
-(35, 0, 0, 0, 0, '2020-04-29 03:50:05'),
-(36, 0, 0, 0, 0, '2020-04-29 03:50:09'),
-(37, 4, 0, 11, 8, '2020-04-29 03:50:12'),
-(38, 3, 0, 14, 9, '2020-04-29 03:50:15'),
-(39, 3, 0, 4, 2, '2020-04-29 03:50:18'),
-(40, 0, 0, 0, 0, '2020-04-29 03:50:21'),
-(41, 0, 0, 0, 0, '2020-04-29 03:50:24'),
-(42, 0, 0, 0, 0, '2020-04-29 03:50:28'),
-(43, 0, 0, 0, 0, '2020-04-29 03:50:31'),
-(44, 0, 0, 0, 0, '2020-04-29 03:50:34'),
-(45, 0, 0, 0, 0, '2020-04-29 03:50:37'),
-(46, 0, 0, 0, 0, '2020-04-29 03:50:40'),
-(47, 0, 0, 0, 0, '2020-04-29 03:50:44'),
-(48, 0, 0, 0, 0, '2020-04-29 03:50:47'),
-(49, 0, 0, 0, 0, '2020-04-29 03:50:50'),
-(50, 0, 0, 0, 0, '2020-04-29 03:50:53'),
-(51, 0, 0, 0, 0, '2020-04-29 03:50:56'),
-(52, 0, 0, 0, 0, '2020-04-29 03:50:59'),
-(53, 0, 0, 0, 0, '2020-04-29 03:51:02'),
-(54, 0, 0, 0, 0, '2020-04-29 03:51:05'),
-(55, 0, 0, 0, 0, '2020-04-29 03:51:08'),
-(56, 0, 27, 0, 0, '2020-04-29 03:51:12'),
-(57, 0, 5, 0, 0, '2020-04-29 03:51:15'),
-(58, 0, 0, 0, 0, '2020-04-29 03:51:18'),
-(59, 0, 0, 0, 0, '2020-04-29 03:51:21'),
-(60, 0, 0, 0, 0, '2020-04-29 03:51:24'),
-(61, 4, 0, 0, 0, '2020-04-29 03:51:27'),
-(62, 0, 0, 0, 0, '2020-04-29 03:51:30'),
-(63, 0, 3, 8, 0, '2020-04-29 04:16:38'),
-(64, 0, 8, 10, 0, '2020-04-29 04:16:41'),
-(65, 4, 1, 10, 0, '2020-04-29 04:16:44'),
-(66, 2, 6, 9, 0, '2020-04-29 04:16:47'),
-(67, 5, 7, 10, 0, '2020-04-29 04:16:50'),
-(68, 5, 2, 12, 0, '2020-04-29 04:16:53'),
-(69, 2, 0, 11, 0, '2020-04-29 04:16:56'),
-(70, 0, 5, 9, 0, '2020-04-29 04:17:00'),
-(71, 1, 9, 9, 0, '2020-04-29 04:17:03'),
-(72, 4, 0, 12, 0, '2020-04-29 04:17:06');
+(73, 5, 5, 20, 30, '2020-05-18 01:10:00'),
+(74, 10, 10, 15, 20, '2020-05-18 01:20:00'),
+(75, 11, 23, 21, 31, '2020-05-18 01:30:00'),
+(76, 10, 27, 19, 17, '2020-05-19 01:10:00'),
+(77, 13, 26, 15, 10, '2020-05-19 01:20:00'),
+(78, 6, 19, 27, 20, '2020-05-19 01:30:00'),
+(79, 9, 29, 16, 18, '2020-05-20 01:10:00'),
+(80, 5, 10, 23, 26, '2020-05-20 01:20:00'),
+(81, 4, 13, 26, 30, '2020-05-20 01:30:00'),
+(82, 5, 7, 22, 19, '2020-05-21 01:10:00'),
+(83, 5, 4, 25, 20, '2020-05-21 01:20:00'),
+(84, 3, 5, 21, 17, '2020-05-21 01:30:00'),
+(85, 1, 4, 19, 15, '2020-05-22 01:10:00'),
+(86, 3, 5, 20, 19, '2020-05-22 01:20:00'),
+(87, 3, 4, 23, 24, '2020-05-22 01:30:00'),
+(88, 4, 2, 23, 25, '2020-05-23 01:10:00'),
+(89, 6, 6, 20, 26, '2020-05-23 01:20:00'),
+(90, 7, 3, 26, 23, '2020-05-23 01:30:00'),
+(91, 5, 5, 20, 16, '2020-05-24 01:10:00'),
+(92, 3, 3, 16, 17, '2020-05-24 01:20:00'),
+(93, 5, 4, 17, 14, '2020-05-24 01:30:00');
 
 -- --------------------------------------------------------
 
@@ -166,6 +114,51 @@ INSERT INTO `table_kategori` (`id`, `nama_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Stand-in struktur untuk tampilan `view_jumlah_menit10`
+-- (Lihat di bawah untuk tampilan aktual)
+--
+CREATE TABLE `view_jumlah_menit10` (
+`tanggal` date
+,`jam` time
+,`jumlah_person` int(11)
+,`jumlah_bicycle` int(11)
+,`jumlah_car` int(11)
+,`jumlah_motorbike` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in struktur untuk tampilan `view_jumlah_menit20`
+-- (Lihat di bawah untuk tampilan aktual)
+--
+CREATE TABLE `view_jumlah_menit20` (
+`tanggal` date
+,`jam` time
+,`jumlah_person` int(11)
+,`jumlah_bicycle` int(11)
+,`jumlah_car` int(11)
+,`jumlah_motorbike` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in struktur untuk tampilan `view_jumlah_menit30`
+-- (Lihat di bawah untuk tampilan aktual)
+--
+CREATE TABLE `view_jumlah_menit30` (
+`tanggal` date
+,`jam` time
+,`jumlah_person` int(11)
+,`jumlah_bicycle` int(11)
+,`jumlah_car` int(11)
+,`jumlah_motorbike` int(11)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Stand-in struktur untuk tampilan `view_jumlah_per_hari`
 -- (Lihat di bawah untuk tampilan aktual)
 --
@@ -176,6 +169,33 @@ CREATE TABLE `view_jumlah_per_hari` (
 ,`jumlah_motorbike` decimal(32,0)
 ,`tanggal` date
 );
+
+-- --------------------------------------------------------
+
+--
+-- Struktur untuk view `view_jumlah_menit10`
+--
+DROP TABLE IF EXISTS `view_jumlah_menit10`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_jumlah_menit10`  AS  select cast(`table_data_deteksi`.`timestamp` as date) AS `tanggal`,cast(`table_data_deteksi`.`timestamp` as time) AS `jam`,`table_data_deteksi`.`jumlah_person` AS `jumlah_person`,`table_data_deteksi`.`jumlah_bicycle` AS `jumlah_bicycle`,`table_data_deteksi`.`jumlah_car` AS `jumlah_car`,`table_data_deteksi`.`jumlah_motorbike` AS `jumlah_motorbike` from `table_data_deteksi` where (minute(`table_data_deteksi`.`timestamp`) = '10') ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur untuk view `view_jumlah_menit20`
+--
+DROP TABLE IF EXISTS `view_jumlah_menit20`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_jumlah_menit20`  AS  select cast(`table_data_deteksi`.`timestamp` as date) AS `tanggal`,cast(`table_data_deteksi`.`timestamp` as time) AS `jam`,`table_data_deteksi`.`jumlah_person` AS `jumlah_person`,`table_data_deteksi`.`jumlah_bicycle` AS `jumlah_bicycle`,`table_data_deteksi`.`jumlah_car` AS `jumlah_car`,`table_data_deteksi`.`jumlah_motorbike` AS `jumlah_motorbike` from `table_data_deteksi` where (minute(`table_data_deteksi`.`timestamp`) = '20') ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur untuk view `view_jumlah_menit30`
+--
+DROP TABLE IF EXISTS `view_jumlah_menit30`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_jumlah_menit30`  AS  select cast(`table_data_deteksi`.`timestamp` as date) AS `tanggal`,cast(`table_data_deteksi`.`timestamp` as time) AS `jam`,`table_data_deteksi`.`jumlah_person` AS `jumlah_person`,`table_data_deteksi`.`jumlah_bicycle` AS `jumlah_bicycle`,`table_data_deteksi`.`jumlah_car` AS `jumlah_car`,`table_data_deteksi`.`jumlah_motorbike` AS `jumlah_motorbike` from `table_data_deteksi` where (minute(`table_data_deteksi`.`timestamp`) = '30') ;
 
 -- --------------------------------------------------------
 
@@ -222,7 +242,7 @@ ALTER TABLE `table_alpha`
 -- AUTO_INCREMENT untuk tabel `table_data_deteksi`
 --
 ALTER TABLE `table_data_deteksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT untuk tabel `table_kategori`

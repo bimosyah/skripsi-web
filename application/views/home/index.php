@@ -24,12 +24,13 @@
                 <div class="col-lg-8">
                   <canvas id="canvas1"></canvas>
                 </div>
-                <br>
                 <div class="col-lg-8">
+                  <br><br>
                   <canvas id="canvas2"></canvas>
                 </div>
                 <br>
                 <div class="col-lg-8">
+                  <br><br>
                   <canvas id="canvas3"></canvas>
                 </div>
 
