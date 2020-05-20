@@ -39,7 +39,14 @@ class Peramalan2 extends CI_Controller
 
 
 		$data['alpha1'] = $result[0];
-		$data['alpha1_error'] = $arr_forecast[0];
+		$data['alpha2'] = $result[1];
+		$data['alpha3'] = $result[2];
+		$data['alpha4'] = $result[3];
+		$data['alpha5'] = $result[4];
+		$data['alpha6'] = $result[6];
+		$data['alpha7'] = $result[7];
+		$data['alpha8'] = $result[8];
+		$data['alpha9'] = $result[9];
 		$data['data_menit_10'] = $data_menit_10;
 		
 		$this->load->view('peramalan/index', $data);

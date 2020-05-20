@@ -57,3 +57,4 @@ $route['data'] = 'api/data/insert_jumlah';
 $route['alpha'] = 'api/data/insert_alpha';
 $route['hitung'] = 'api/data/double_exponential';
 $route['data-deteksi'] = 'DataDeteksi/index';
+$route['peramalan'] = 'Peramalan2/index';
