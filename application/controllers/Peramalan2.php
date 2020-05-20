@@ -15,7 +15,11 @@ class Peramalan2 extends CI_Controller
 	{
 		$alpha = $this->getAlpha();
 		$data_menit_10 = $this->rawDataMenit10();
+		$data_menit_20 = $this->rawDataMenit20();
+
 		$result = array();
+		$result_menit_20 = array();
+		
 		$arr_forecast = array();
 
 		foreach ($alpha as $value) {
@@ -37,21 +41,51 @@ class Peramalan2 extends CI_Controller
 			array_push($result, $temp);
 		}
 
+		foreach ($alpha as $value) {
+			$smoothing1 = $this->smoothing1($data_menit_20, $value->nilai_alpha);
+			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
+			$konstantaA = $this->konstantaA($smoothing1,$smoothing2);
+			$konstantaB = $this->konstantaB($smoothing1, $smoothing2, $value->nilai_alpha);
+			$forecast = $this->forecast($konstantaA, $konstantaB);
+
+			$temp = array(
+				'smoothing1' => $smoothing1,
+				'smoothing2' => $smoothing2,
+				'konstantaA' => $konstantaA,
+				'konstantaB' => $konstantaB,
+				'forecast' => $forecast
+			);
+
+			array_push($arr_forecast, $forecast);
+			array_push($result_menit_20, $temp);
+		}
+
 
 		$data['alpha1'] = $result[0];
 		$data['alpha2'] = $result[1];
 		$data['alpha3'] = $result[2];
 		$data['alpha4'] = $result[3];
 		$data['alpha5'] = $result[4];
-		$data['alpha6'] = $result[6];
-		$data['alpha7'] = $result[7];
-		$data['alpha8'] = $result[8];
-		$data['alpha9'] = $result[9];
+		$data['alpha6'] = $result[5];
+		$data['alpha7'] = $result[6];
+		$data['alpha8'] = $result[7];
+		$data['alpha9'] = $result[8];
 		$data['data_menit_10'] = $data_menit_10;
+
+		$data['alpha1_2'] = $result_menit_20[0];
+		$data['alpha2_2'] = $result_menit_20[1];
+		$data['alpha3_2'] = $result_menit_20[2];
+		$data['alpha4_2'] = $result_menit_20[3];
+		$data['alpha5_2'] = $result_menit_20[4];
+		$data['alpha6_2'] = $result_menit_20[5];
+		$data['alpha7_2'] = $result_menit_20[6];
+		$data['alpha8_2'] = $result_menit_20[7];
+		$data['alpha9_2'] = $result_menit_20[8];
+		$data['data_menit_20'] = $data_menit_20;
 		
 		$this->load->view('peramalan/index', $data);
 		// header('Content-Type: application/json');
-		// echo json_encode($forecast_error);
+		// echo json_encode($result);
 	}
 
 	public function getAlpha()
@@ -63,6 +97,12 @@ class Peramalan2 extends CI_Controller
 	function rawDataMenit10()
 	{
 		$query = $this->data_deteksi->view_jumlah_menit10();
+		return $query;
+	}
+
+	function rawDataMenit20()
+	{
+		$query = $this->data_deteksi->view_jumlah_menit20();
 		return $query;
 	}
 

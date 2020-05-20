@@ -1,159 +1,350 @@
-<h3 style="font-size: 17px">Table Volume Data</h3>
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Tanggal</th>
-      <th>Orang</th>
-      <th>Sepeda</th>
-      <th>Mobil</th>
-      <th>Motor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($raw_data as $value): ?>
-      <tr>
-        <td><?php echo $value->tanggal ?></td>
-        <td><?php echo $value->jumlah_person ?></td>
-        <td><?php echo $value->jumlah_bicycle ?></td>
-        <td><?php echo $value->jumlah_car ?></td>
-        <td><?php echo $value->jumlah_motorbike ?></td>
-      </tr>
-    <?php endforeach ?>
-  </tbody>
-</table>
+<div id="accordion">
 
-<br>
-<h3 style="font-size: 17px">Smoothing 1</h3>
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>X</th>
-      <th>Orang</th>
-      <th>Sepeda</th>
-      <th>Mobil</th>
-      <th>Motor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php $i = 1; ?>
-    <?php foreach ($alpha8['smoothing1'] as $key => $value): ?>
-      <tr>
-        <td>s't <?php echo $i; ?></td>
-        <td><?php echo $value['person'] ?></td>
-        <td><?php echo $value['bicycle'] ?></td>
-        <td><?php echo $value['car'] ?></td>
-        <td><?php echo $value['motorbike'] ?></td>
-      </tr>
-      <?php $i++; ?>
-    <?php endforeach ?>
+  <div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" href="#collapseOne">
+        Jam 08:10
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+      <div class="card-body">
+        <!-- Orang -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Orang</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_10[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_10[$i]->jumlah_person ?></td>
+                <td><?php echo $alpha8['smoothing1'][$i]['person']; ?></td>
+                <td><?php echo $alpha8['smoothing2'][$i]['person']; ?></td>
+                <td><?php echo $alpha8['konstantaA'][$i]['person']; ?></td>
+                <td><?php echo $alpha8['konstantaB'][$i]['person']; ?></td>
+                <td><?php echo $alpha8['forecast'][$i]['person']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8['forecast'][7]['person']; ?></th>
+          </tfoot>
+        </table>  
+        <br><br>
 
-  </tbody>
-</table>
+        <!-- Sepeda -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Sepedah</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_10[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_10[$i]->jumlah_bicycle ?></td>
+                <td><?php echo $alpha8['smoothing1'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8['smoothing2'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8['konstantaA'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8['konstantaB'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8['forecast'][$i]['bicycle']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8['forecast'][7]['bicycle']; ?></th>
+          </tfoot>
+        </table>
+        <br><br>
 
-<br>
-<h3 style="font-size: 17px">Smoothing 2</h3>
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>X</th>
-      <th>Orang</th>
-      <th>Sepeda</th>
-      <th>Mobil</th>
-      <th>Motor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php $i = 1; ?>
-    <?php foreach ($alpha8['smoothing2'] as $key => $value): ?>
-      <tr>
-        <td>s''t <?php echo $i; ?></td>
-        <td><?php echo $value['person'] ?></td>
-        <td><?php echo $value['bicycle'] ?></td>
-        <td><?php echo $value['car'] ?></td>
-        <td><?php echo $value['motorbike'] ?></td>
-      </tr>
-      <?php $i++; ?>
-    <?php endforeach ?>
+        <!-- Mobil -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Mobil</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_10[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_10[$i]->jumlah_car ?></td>
+                <td><?php echo $alpha8['smoothing1'][$i]['car']; ?></td>
+                <td><?php echo $alpha8['smoothing2'][$i]['car']; ?></td>
+                <td><?php echo $alpha8['konstantaA'][$i]['car']; ?></td>
+                <td><?php echo $alpha8['konstantaB'][$i]['car']; ?></td>
+                <td><?php echo $alpha8['forecast'][$i]['car']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8['forecast'][7]['car']; ?></th>
+          </tfoot>
+        </table>
 
-  </tbody>
-</table>
+        <br><br>
 
-<br>
-<h3 style="font-size: 17px">Konstanta a</h3>
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>X</th>
-      <th>Orang</th>
-      <th>Sepeda</th>
-      <th>Mobil</th>
-      <th>Motor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php $i = 1; ?>
-    <?php foreach ($alpha8['konstantaA'] as $key => $value): ?>
-      <tr>
-        <td>a <?php echo $i; ?></td>
-        <td><?php echo $value['person'] ?></td>
-        <td><?php echo $value['bicycle'] ?></td>
-        <td><?php echo $value['car'] ?></td>
-        <td><?php echo $value['motorbike'] ?></td>
-      </tr>
-      <?php $i++; ?>
-    <?php endforeach ?>
+        <!-- motor -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Motor</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_10[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_10[$i]->jumlah_motorbike ?></td>
+                <td><?php echo $alpha8['smoothing1'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8['smoothing2'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8['konstantaA'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8['konstantaB'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8['forecast'][$i]['motorbike']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8['forecast'][7]['motorbike']; ?></th>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
 
-  </tbody>
-</table>
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Jam 08:20
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <!-- Orang -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Orang</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_20[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_20[$i]->jumlah_person ?></td>
+                <td><?php echo $alpha8_2['smoothing1'][$i]['person']; ?></td>
+                <td><?php echo $alpha8_2['smoothing2'][$i]['person']; ?></td>
+                <td><?php echo $alpha8_2['konstantaA'][$i]['person']; ?></td>
+                <td><?php echo $alpha8_2['konstantaB'][$i]['person']; ?></td>
+                <td><?php echo $alpha8_2['forecast'][$i]['person']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8_2['forecast'][7]['person']; ?></th>
+          </tfoot>
+        </table>  
+        <br><br>
 
-<br>
-<h3 style="font-size: 17px">Konstanta b</h3>
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>X</th>
-      <th>Orang</th>
-      <th>Sepeda</th>
-      <th>Mobil</th>
-      <th>Motor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php $i = 1; ?>
-    <?php foreach ($alpha8['konstantaB'] as $key => $value): ?>
-      <tr>
-        <td>b <?php echo $i; ?></td>
-        <td><?php echo $value['person'] ?></td>
-        <td><?php echo $value['bicycle'] ?></td>
-        <td><?php echo $value['car'] ?></td>
-        <td><?php echo $value['motorbike'] ?></td>
-      </tr>
-      <?php $i++; ?>
-    <?php endforeach ?>
+        <!-- Sepeda -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Sepedah</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_20[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_20[$i]->jumlah_bicycle ?></td>
+                <td><?php echo $alpha8_2['smoothing1'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8_2['smoothing2'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8_2['konstantaA'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8_2['konstantaB'][$i]['bicycle']; ?></td>
+                <td><?php echo $alpha8_2['forecast'][$i]['bicycle']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8_2['forecast'][7]['bicycle']; ?></th>
+          </tfoot>
+        </table>
+        <br><br>
 
-  </tbody>
-</table>
+        <!-- Mobil -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Mobil</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_20[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_20[$i]->jumlah_car ?></td>
+                <td><?php echo $alpha8_2['smoothing1'][$i]['car']; ?></td>
+                <td><?php echo $alpha8_2['smoothing2'][$i]['car']; ?></td>
+                <td><?php echo $alpha8_2['konstantaA'][$i]['car']; ?></td>
+                <td><?php echo $alpha8_2['konstantaB'][$i]['car']; ?></td>
+                <td><?php echo $alpha8_2['forecast'][$i]['car']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8_2['forecast'][7]['car']; ?></th>
+          </tfoot>
+        </table>
 
-<br>
-<h3 style="font-size: 17px">Forecast</h3>
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Orang</th>
-      <th>Sepeda</th>
-      <th>Mobil</th>
-      <th>Motor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($alpha8['forecast'] as $key => $value): ?>
-      <tr>
-        <td><?php echo $value['person'] ?></td>
-        <td><?php echo $value['bicycle'] ?></td>
-        <td><?php echo $value['car'] ?></td>
-        <td><?php echo $value['motorbike'] ?></td>
-      </tr>
-    <?php endforeach ?>
+        <br><br>
 
-  </tbody>
-</table>
+        <!-- motor -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Alpha</th>
+              <th>0.8</th>
+              <th colspan="5" style="text-align: center;">Motor</th>
+            </tr>
+            <tr>
+              <th>Tanggal</th>
+              <th>Volume Y(t)</th>
+              <th>S1 (S't)</th>
+              <th>S2 (S''t)</th>
+              <th>Nilai At</th>
+              <th>Nilai Bt</th>
+              <th>Peramalan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+            for ($i = 0; $i < 7; $i++): ?>
+              <tr>
+                <td><?php echo $data_menit_20[$i]->tanggal ?></td>
+                <td><?php echo $data_menit_20[$i]->jumlah_motorbike ?></td>
+                <td><?php echo $alpha8_2['smoothing1'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8_2['smoothing2'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8_2['konstantaA'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8_2['konstantaB'][$i]['motorbike']; ?></td>
+                <td><?php echo $alpha8_2['forecast'][$i]['motorbike']; ?></td>
+              </tr>
+            <?php endfor; ?>
+          </tbody>
+          <tfoot>
+            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,1 = </th>
+            <th><?php echo $alpha8_2['forecast'][7]['motorbike']; ?></th>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+        Jam 08:30
+      </a>
+    </div>
+    <div id="collapseThree" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        Lorem ipsum..
+      </div>
+    </div>
+  </div>
+
+</div>
