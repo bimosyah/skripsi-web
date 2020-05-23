@@ -6,7 +6,7 @@
         Jam 08:10
       </a>
     </div>
-    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+    <div id="collapseOne" class="collapse" data-parent="#accordion">
       <div class="card-body">
         <!-- Orang -->
         <table id="table_peramalan_detail" class="table table-bordered table-striped">

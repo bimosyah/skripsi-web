@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Peramalan2 extends CI_Controller 
-{
+class Peramalan2 extends CI_Controller {
 
 	public function __construct()
 	{
@@ -14,17 +13,23 @@ class Peramalan2 extends CI_Controller
 	public function index()
 	{
 		$alpha = $this->getAlpha();
+		
 		$data_menit_10 = $this->rawDataMenit10();
 		$data_menit_20 = $this->rawDataMenit20();
 		$data_menit_30 = $this->rawDataMenit30();
 
-		$result = array();
+		$result_menit_10 = array();
 		$result_menit_20 = array();
 		$result_menit_30 = array();
+		$error_result_menit_10 = array();
+		$error_result_menit_20 = array();
+		$error_result_menit_30 = array();
 
-		$arr_forecast = array();
+		$forecast_menit10 = array();
+		$forecast_menit20 = array();
+		$forecast_menit30 = array();
 
-		//menit 10
+		//peramalan menit 10
 		foreach ($alpha as $value) {
 			$smoothing1 = $this->smoothing1($data_menit_10, $value->nilai_alpha);
 			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
@@ -40,11 +45,11 @@ class Peramalan2 extends CI_Controller
 				'forecast' => $forecast
 			);
 
-			// array_push($arr_forecast, $forecast);
-			array_push($result, $temp);
+			array_push($forecast_menit10, $forecast);
+			array_push($result_menit_10, $temp);
 		}
 
-		//menit 20
+		//peramalan menit 20
 		foreach ($alpha as $value) {
 			$smoothing1 = $this->smoothing1($data_menit_20, $value->nilai_alpha);
 			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
@@ -60,11 +65,11 @@ class Peramalan2 extends CI_Controller
 				'forecast' => $forecast
 			);
 
-			// array_push($arr_forecast, $forecast);
+			array_push($forecast_menit20, $forecast);
 			array_push($result_menit_20, $temp);
 		}
 
-		//menit 30
+		//peramalan menit 30
 		foreach ($alpha as $value) {
 			$smoothing1 = $this->smoothing1($data_menit_30, $value->nilai_alpha);
 			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
@@ -80,22 +85,65 @@ class Peramalan2 extends CI_Controller
 				'forecast' => $forecast
 			);
 
-			// array_push($arr_forecast, $forecast);
+			array_push($forecast_menit30, $forecast);
 			array_push($result_menit_30, $temp);
 		}
 
+		//error peramalan menit 10
+		for ($i = 0; $i < 9; $i++) {
+			
+			$data = array(
+				'person' => $this->error_orang($data_menit_10,$forecast_menit10[$i]),
+				'bicycle' =>$this->error_sepeda($data_menit_10,$forecast_menit10[$i]),
+				'car' =>$this->error_mobil($data_menit_10,$forecast_menit10[$i]),
+				'motorbike' =>$this->error_motor($data_menit_10,$forecast_menit10[$i])
+			);
+			array_push($error_result_menit_10, $data);
+		}
 
+		//error peramalan menit 20
+		for ($i = 0; $i < 9; $i++) {
+			
+			$data = array(
+				'person' => $this->error_orang($data_menit_20,$forecast_menit20[$i]),
+				'bicycle' =>$this->error_sepeda($data_menit_20,$forecast_menit20[$i]),
+				'car' =>$this->error_mobil($data_menit_20,$forecast_menit20[$i]),
+				'motorbike' =>$this->error_motor($data_menit_20,$forecast_menit20[$i])
+			);
+			array_push($error_result_menit_20, $data);
+		}
 
-		$data['alpha1'] = $result[0];
-		$data['alpha2'] = $result[1];
-		$data['alpha3'] = $result[2];
-		$data['alpha4'] = $result[3];
-		$data['alpha5'] = $result[4];
-		$data['alpha6'] = $result[5];
-		$data['alpha7'] = $result[6];
-		$data['alpha8'] = $result[7];
-		$data['alpha9'] = $result[8];
-		$data['data_menit_10'] = $data_menit_10;
+		//error peramalan menit 30
+		for ($i = 0; $i < 9; $i++) {
+			
+			$data = array(
+				'person' => $this->error_orang($data_menit_30,$forecast_menit30[$i]),
+				'bicycle' =>$this->error_sepeda($data_menit_30,$forecast_menit30[$i]),
+				'car' =>$this->error_mobil($data_menit_30,$forecast_menit30[$i]),
+				'motorbike' =>$this->error_motor($data_menit_30,$forecast_menit30[$i])
+			);
+			array_push($error_result_menit_30, $data);
+		}
+
+		$data['alpha1'] = $result_menit_10[0];
+		$data['alpha2'] = $result_menit_10[1];
+		$data['alpha3'] = $result_menit_10[2];
+		$data['alpha4'] = $result_menit_10[3];
+		$data['alpha5'] = $result_menit_10[4];
+		$data['alpha6'] = $result_menit_10[5];
+		$data['alpha7'] = $result_menit_10[6];
+		$data['alpha8'] = $result_menit_10[7];
+		$data['alpha9'] = $result_menit_10[8];
+
+		$data['error_alpha1'] = $error_result_menit_10[0];
+		$data['error_alpha2'] = $error_result_menit_10[1];
+		$data['error_alpha3'] = $error_result_menit_10[2];
+		$data['error_alpha4'] = $error_result_menit_10[3];
+		$data['error_alpha5'] = $error_result_menit_10[4];
+		$data['error_alpha6'] = $error_result_menit_10[5];
+		$data['error_alpha7'] = $error_result_menit_10[6];
+		$data['error_alpha8'] = $error_result_menit_10[7];
+		$data['error_alpha9'] = $error_result_menit_10[8];
 
 		$data['alpha1_2'] = $result_menit_20[0];
 		$data['alpha2_2'] = $result_menit_20[1];
@@ -106,7 +154,16 @@ class Peramalan2 extends CI_Controller
 		$data['alpha7_2'] = $result_menit_20[6];
 		$data['alpha8_2'] = $result_menit_20[7];
 		$data['alpha9_2'] = $result_menit_20[8];
-		$data['data_menit_20'] = $data_menit_20;
+
+		$data['error_alpha1_2'] = $error_result_menit_20[0];
+		$data['error_alpha2_2'] = $error_result_menit_20[1];
+		$data['error_alpha3_2'] = $error_result_menit_20[2];
+		$data['error_alpha4_2'] = $error_result_menit_20[3];
+		$data['error_alpha5_2'] = $error_result_menit_20[4];
+		$data['error_alpha6_2'] = $error_result_menit_20[5];
+		$data['error_alpha7_2'] = $error_result_menit_20[6];
+		$data['error_alpha8_2'] = $error_result_menit_20[7];
+		$data['error_alpha9_2'] = $error_result_menit_20[8];
 
 		$data['alpha1_3'] = $result_menit_30[0];
 		$data['alpha2_3'] = $result_menit_30[1];
@@ -117,11 +174,27 @@ class Peramalan2 extends CI_Controller
 		$data['alpha7_3'] = $result_menit_30[6];
 		$data['alpha8_3'] = $result_menit_30[7];
 		$data['alpha9_3'] = $result_menit_30[8];
-		$data['data_menit_30'] = $data_menit_30;
+
+		$data['error_alpha1_3'] = $error_result_menit_30[0];
+		$data['error_alpha2_3'] = $error_result_menit_30[1];
+		$data['error_alpha3_3'] = $error_result_menit_30[2];
+		$data['error_alpha4_3'] = $error_result_menit_30[3];
+		$data['error_alpha5_3'] = $error_result_menit_30[4];
+		$data['error_alpha6_3'] = $error_result_menit_30[5];
+		$data['error_alpha7_3'] = $error_result_menit_30[6];
+		$data['error_alpha8_3'] = $error_result_menit_30[7];
+		$data['error_alpha9_3'] = $error_result_menit_30[8];
 		
+		$data['data_menit_10'] = $data_menit_10;
+		$data['data_menit_20'] = $data_menit_20;
+		$data['data_menit_30'] = $data_menit_30;
+
 		$this->load->view('peramalan/index', $data);
 		// header('Content-Type: application/json');
-		// echo json_encode($result);
+		// echo json_encode($result_menit_10);
+
+		// header('Content-Type: application/json');
+		// echo json_encode($error_result_menit_20);
 	}
 
 	public function getAlpha()
@@ -284,10 +357,130 @@ class Peramalan2 extends CI_Controller
 		return $result;
 	}
 
-	public function error()
+	public function error_orang($data_per_menit, $forecast)
 	{
-		
+		$arr_temp = array();
+		$jumlah_pe = 0;
+		$mape = 0;
+		for ($i = 0; $i < 7; $i++) {
+			
+			$error = $data_per_menit[$i]->jumlah_person - $forecast[$i]['person'];
+			$abs = abs($error);
+			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_person) * 100);
+			$jumlah_pe += $pe;
+			
+			$temp = array(
+				'error' => round($error,3),
+				'abs' => round($abs,3),
+				'pe' => round($pe,3),
+			);
+			array_push($arr_temp, $temp);
+		}
+
+		$mape = $jumlah_pe / 7;
+
+		$data = array(
+			'mape' => round($mape,2),
+			'jumlah_pe' => round($jumlah_pe,2),
+			'data' => $arr_temp
+		);
+
+		return $data;
 	}
+
+	public function error_sepeda($data_per_menit, $forecast)
+	{
+		$arr_temp = array();
+		$jumlah_pe = 0;
+		$mape = 0;
+		for ($i = 0; $i < 7; $i++) {
+			
+			$error = $data_per_menit[$i]->jumlah_bicycle - $forecast[$i]['bicycle'];
+			$abs = abs($error);
+			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_bicycle) * 100);
+			$jumlah_pe += $pe;
+			
+			$temp = array(
+				'error' => round($error,3),
+				'abs' => round($abs,3),
+				'pe' => round($pe,3),
+			);
+			array_push($arr_temp, $temp);
+		}
+
+		$mape = $jumlah_pe / 7;
+
+		$data = array(
+			'mape' => round($mape,2),
+			'jumlah_pe' => round($jumlah_pe,2),
+			'data' => $arr_temp
+		);
+
+		return $data;
+	}
+
+	public function error_mobil($data_per_menit, $forecast)
+	{
+		$arr_temp = array();
+		$jumlah_pe = 0;
+		$mape = 0;
+		for ($i = 0; $i < 7; $i++) {
+			
+			$error = $data_per_menit[$i]->jumlah_car - $forecast[$i]['car'];
+			$abs = abs($error);
+			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_car) * 100);
+			$jumlah_pe += $pe;
+			
+			$temp = array(
+				'error' => round($error,3),
+				'abs' => round($abs,3),
+				'pe' => round($pe,3),
+			);
+			array_push($arr_temp, $temp);
+		}
+
+		$mape = $jumlah_pe / 7;
+
+		$data = array(
+			'mape' => round($mape,2),
+			'jumlah_pe' => round($jumlah_pe,2),
+			'data' => $arr_temp
+		);
+
+		return $data;
+	}
+
+	public function error_motor($data_per_menit, $forecast)
+	{
+		$arr_temp = array();
+		$jumlah_pe = 0;
+		$mape = 0;
+		for ($i = 0; $i < 7; $i++) {
+			
+			$error = $data_per_menit[$i]->jumlah_motorbike - $forecast[$i]['motorbike'];
+			$abs = abs($error);
+			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_motorbike) * 100);
+			$jumlah_pe += $pe;
+			
+			$temp = array(
+				'error' => round($error,3),
+				'abs' => round($abs,3),
+				'pe' => round($pe,3),
+			);
+			array_push($arr_temp, $temp);
+		}
+
+		$mape = $jumlah_pe / 7;
+
+		$data = array(
+			'mape' => round($mape,2),
+			'jumlah_pe' => round($jumlah_pe,2),
+			'data' => $arr_temp
+		);
+
+		return $data;
+	}
+
 }
 
 /* End of file Peramalan2.php */
