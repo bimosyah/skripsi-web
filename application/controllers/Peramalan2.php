@@ -16,10 +16,12 @@ class Peramalan2 extends CI_Controller
 		$alpha = $this->getAlpha();
 		$data_menit_10 = $this->rawDataMenit10();
 		$data_menit_20 = $this->rawDataMenit20();
+		$data_menit_30 = $this->rawDataMenit30();
 
 		$result = array();
 		$result_menit_20 = array();
-		
+		$result_menit_30 = array();
+
 		$arr_forecast = array();
 
 		foreach ($alpha as $value) {
@@ -37,7 +39,7 @@ class Peramalan2 extends CI_Controller
 				'forecast' => $forecast
 			);
 
-			array_push($arr_forecast, $forecast);
+			// array_push($arr_forecast, $forecast);
 			array_push($result, $temp);
 		}
 
@@ -56,9 +58,29 @@ class Peramalan2 extends CI_Controller
 				'forecast' => $forecast
 			);
 
-			array_push($arr_forecast, $forecast);
+			// array_push($arr_forecast, $forecast);
 			array_push($result_menit_20, $temp);
 		}
+
+		foreach ($alpha as $value) {
+			$smoothing1 = $this->smoothing1($data_menit_30, $value->nilai_alpha);
+			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
+			$konstantaA = $this->konstantaA($smoothing1,$smoothing2);
+			$konstantaB = $this->konstantaB($smoothing1, $smoothing2, $value->nilai_alpha);
+			$forecast = $this->forecast($konstantaA, $konstantaB);
+
+			$temp = array(
+				'smoothing1' => $smoothing1,
+				'smoothing2' => $smoothing2,
+				'konstantaA' => $konstantaA,
+				'konstantaB' => $konstantaB,
+				'forecast' => $forecast
+			);
+
+			// array_push($arr_forecast, $forecast);
+			array_push($result_menit_30, $temp);
+		}
+
 
 
 		$data['alpha1'] = $result[0];
@@ -82,6 +104,17 @@ class Peramalan2 extends CI_Controller
 		$data['alpha8_2'] = $result_menit_20[7];
 		$data['alpha9_2'] = $result_menit_20[8];
 		$data['data_menit_20'] = $data_menit_20;
+
+		$data['alpha1_3'] = $result_menit_30[0];
+		$data['alpha2_3'] = $result_menit_30[1];
+		$data['alpha3_3'] = $result_menit_30[2];
+		$data['alpha4_3'] = $result_menit_30[3];
+		$data['alpha5_3'] = $result_menit_30[4];
+		$data['alpha6_3'] = $result_menit_30[5];
+		$data['alpha7_3'] = $result_menit_30[6];
+		$data['alpha8_3'] = $result_menit_30[7];
+		$data['alpha9_3'] = $result_menit_30[8];
+		$data['data_menit_30'] = $data_menit_30;
 		
 		$this->load->view('peramalan/index', $data);
 		// header('Content-Type: application/json');
@@ -103,6 +136,12 @@ class Peramalan2 extends CI_Controller
 	function rawDataMenit20()
 	{
 		$query = $this->data_deteksi->view_jumlah_menit20();
+		return $query;
+	}
+
+	function rawDataMenit30()
+	{
+		$query = $this->data_deteksi->view_jumlah_menit30();
 		return $query;
 	}
 
