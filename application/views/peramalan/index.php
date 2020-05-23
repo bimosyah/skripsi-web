@@ -18,7 +18,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Detail Peramalan</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Perhitungan Peramalan</h3>
             </div>
             <div class="card-body">
               <!-- Nav tabs -->
@@ -107,6 +107,113 @@
                   <br>
                   <div class="col-lg-8">
                     <?php $this->load->view('peramalan/alpha9'); ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Error Peramalan</h3>
+            </div>
+            <div class="card-body">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="error1-tab" data-toggle="tab" href="#error1" role="tab" aria-controls="error1" aria-selected="true">Error Alpha 0.1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error2-tab" data-toggle="tab" href="#error2" role="tab" aria-controls="error2" aria-selected="false">Error Alpha 0.2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error3-tab" data-toggle="tab" href="#error3" role="tab" aria-controls="error3" aria-selected="false">Error Alpha 0.3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error4-tab" data-toggle="tab" href="#error4" role="tab" aria-controls="error4" aria-selected="false">Error Alpha 0.4</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error5-tab" data-toggle="tab" href="#error5" role="tab" aria-controls="error5" aria-selected="false">Error Alpha 0.5</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error6-tab" data-toggle="tab" href="#error6" role="tab" aria-controls="error6" aria-selected="false">Error Alpha 0.6</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error7-tab" data-toggle="tab" href="#error7" role="tab" aria-controls="error7" aria-selected="false">Error Alpha 0.7</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error8-tab" data-toggle="tab" href="#error8" role="tab" aria-controls="error8" aria-selected="false">Error Alpha 0.8</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="error9-tab" data-toggle="tab" href="#error9" role="tab" aria-controls="error9" aria-selected="false">Error Alpha 0.9</a>
+                </li>
+
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="error1" role="tabpanel" aria-labelledby="error1-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                  </div>
+                </div>
+                <div class="tab-pane" id="error2" role="tabpanel" aria-labelledby="error2-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error3" role="tabpanel" aria-labelledby="error3-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error4" role="tabpanel" aria-labelledby="error4-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error5" role="tabpanel" aria-labelledby="error5-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error6" role="tabpanel" aria-labelledby="error6-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error7" role="tabpanel" aria-labelledby="error7-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error8" role="tabpanel" aria-labelledby="error8-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
+                  </div>
+                </div>
+                <div class="tab-pane" id="error9" role="tabpanel" aria-labelledby="error9-tab">
+                  <br>
+                  <div class="col-lg-8">
+                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+
                   </div>
                 </div>
               </div>

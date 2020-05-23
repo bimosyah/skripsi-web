@@ -1,43 +1,124 @@
-<hr><hr><hr>
-<!-- motor -->
-<table id="table_peramalan_detail" class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th rowspan="2" style="text-align: center;">Tanggal</th>
-      <th colspan="3" style="text-align: center;">ERROR Orang</th>
-    </tr>
-    <tr>
-      <th>ERROR</th>
-      <th>ABS(ERROR)</th>
-      <th>PE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php $total_pe = 0 ?>
-    <?php for ($i = 0; $i < 7; $i++):?>
-      <?php 
-      $error = $data_menit_10[$i]->jumlah_person - $alpha1_error[$i]['person'];
-      $abs_error = abs($error);
-        $pe = ($abs_error/$data_menit_10[$i]->jumlah_person)*100;
-        $total_pe += $pe ;
-        $mape = $total_pe/7;
-        ?>
-        <tr>
-          <td><?php echo $data_menit_10[$i]->tanggal ?>%</td>
-          <td><?php echo $error?>%</td>
-          <td><?php echo $abs_error?>%</td>
-          <td><?php echo $pe?>%</td>
-        </tr>
-      <?php endfor; ?>
-    </tbody>
-    <tfoot>
-      <tr>
-        <th colspan="3" style="text-align: right;">JUMLAH PE</th>
-        <th><?php echo $total_pe ?></th>
-      </tr>
-      <tr>
-        <th colspan="3" style="text-align: right;">MAPE</th>
-        <th><?php echo $mape ?></th>
-      </tr>
-    </tfoot>
-  </table>
+<div id="accordion2">
+  <div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" href="#collapse1">
+        Jam 08:10
+      </a>
+    </div>
+    <div id="collapse1" class="collapse show" data-parent="#accordion2">
+      <div class="card-body">
+        <!-- orang -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th rowspan="2" style="text-align: center;">Tanggal</th>
+              <th colspan="3" style="text-align: center;">ERROR Orang</th>
+            </tr>
+            <tr>
+              <th>ERROR</th>
+              <th>ABS(ERROR)</th>
+              <th>PE</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th></th>
+            </tr>
+            <tr>
+              <th colspan="3" style="text-align: right;">MAPE</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" href="#collapse2">
+        Jam 08:20
+      </a>
+    </div>
+    <div id="collapse2" class="collapse" data-parent="#accordion2">
+      <div class="card-body">
+        <!-- orang -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th rowspan="2" style="text-align: center;">Tanggal</th>
+              <th colspan="3" style="text-align: center;">ERROR Orang</th>
+            </tr>
+            <tr>
+              <th>ERROR</th>
+              <th>ABS(ERROR)</th>
+              <th>PE</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th></th>
+            </tr>
+            <tr>
+              <th colspan="3" style="text-align: right;">MAPE</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" href="#collapse3">
+        Jam 08:30
+      </a>
+    </div>
+    <div id="collapse3" class="collapse" data-parent="#accordion2">
+      <div class="card-body">
+        <!-- orang -->
+        <table id="table_peramalan_detail" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th rowspan="2" style="text-align: center;">Tanggal</th>
+              <th colspan="3" style="text-align: center;">ERROR Orang</th>
+            </tr>
+            <tr>
+              <th>ERROR</th>
+              <th>ABS(ERROR)</th>
+              <th>PE</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th></th>
+            </tr>
+            <tr>
+              <th colspan="3" style="text-align: right;">MAPE</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+</div>

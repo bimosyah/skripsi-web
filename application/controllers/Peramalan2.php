@@ -24,6 +24,7 @@ class Peramalan2 extends CI_Controller
 
 		$arr_forecast = array();
 
+		//menit 10
 		foreach ($alpha as $value) {
 			$smoothing1 = $this->smoothing1($data_menit_10, $value->nilai_alpha);
 			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
@@ -43,6 +44,7 @@ class Peramalan2 extends CI_Controller
 			array_push($result, $temp);
 		}
 
+		//menit 20
 		foreach ($alpha as $value) {
 			$smoothing1 = $this->smoothing1($data_menit_20, $value->nilai_alpha);
 			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
@@ -62,6 +64,7 @@ class Peramalan2 extends CI_Controller
 			array_push($result_menit_20, $temp);
 		}
 
+		//menit 30
 		foreach ($alpha as $value) {
 			$smoothing1 = $this->smoothing1($data_menit_30, $value->nilai_alpha);
 			$smoothing2 = $this->smoothing2($smoothing1, $value->nilai_alpha);
