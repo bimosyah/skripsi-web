@@ -189,9 +189,13 @@ class Peramalan2 extends CI_Controller {
 		$data['data_menit_20'] = $data_menit_20;
 		$data['data_menit_30'] = $data_menit_30;
 
+		$data['mape_10'] = $error_result_menit_10;
+		$data['mape_20'] = $error_result_menit_20;
+		$data['mape_30'] = $error_result_menit_30;
+		
 		$this->load->view('peramalan/index', $data);
 		// header('Content-Type: application/json');
-		// echo json_encode($result_menit_10);
+		// echo json_encode($data['mape_10']);
 
 		// header('Content-Type: application/json');
 		// echo json_encode($error_result_menit_20);

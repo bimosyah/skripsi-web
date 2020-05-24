@@ -1,97 +1,94 @@
-<div class="row">
-	<div class="col-lg-6">
-		<h3 style="font-size: 17px">Orang</h3>
-		<table id="table_peramalan_detail" class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Alpha</th>
-					<th>Peramalan</th>
-					<th>APE</th>
-					<th>MAPE</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach ($result_forecast as $value): ?>
+<ul class="nav nav-tabs" id="myTab3" role="tablist">
+	<li class="nav-item">
+		<a class="nav-link active" id="mape1-tab" data-toggle="tab" href="#mape1" role="tab" aria-controls="mape1" aria-selected="true">8:10</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" id="mape2-tab" data-toggle="tab" href="#mape2" role="tab" aria-controls="mape2" aria-selected="true">8:20</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" id="mape3-tab" data-toggle="tab" href="#mape3" role="tab" aria-controls="mape3" aria-selected="true">8:30</a>
+	</li>
+</ul>
+<div class="tab-content">
+	<div class="tab-pane active" id="mape1" role="tabpanel" aria-labelledby="mape1-tab">
+		<br>
+		<div class="col-lg-8">
+			<table id="table_peramalan_detail" class="table table-bordered table-striped">
+				<thead>
 					<tr>
-						<td><?php echo $value['alpha'] ?></td>
-						<td><?php echo $value['forecast'][0]['person'] ?></td>
-						<td>X</td>
-						<td>X</td>
+						<th>ALPHA</th>
+						<th>ORANG</th>
+						<th>SEPEDA</th>
+						<th>MOBIL</th>
+						<th>MOTOR</th>
 					</tr>
-				<?php endforeach ?>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<?php for ($i = 0; $i < 9; $i++):?>
+						<tr>
+							<td>0.<?php echo $i+1; ?></td>
+							<td><?php echo $mape_10[$i]['person']['mape']; ?> %</td>
+							<td><?php echo $mape_10[$i]['bicycle']['mape']; ?> %</td>
+							<td><?php echo $mape_10[$i]['car']['mape']; ?> %</td>
+							<td><?php echo $mape_10[$i]['motorbike']['mape']; ?> %</td>
+						</tr>
+					<?php endfor; ?>
+				</tbody>
+			</table>
+		</div>
 	</div>
-	<div class="col-lg-6">
-		<h3 style="font-size: 17px">Sepeda</h3>
-		<table id="table_peramalan_detail" class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Alpha</th>
-					<th>Peramalan</th>
-					<th>APE</th>
-					<th>MAPE</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach ($result_forecast as $value): ?>
+	<div class="tab-pane" id="mape2" role="tabpanel" aria-labelledby="mape2-tab">
+		<br>
+		<div class="col-lg-8">
+			<table id="table_peramalan_detail" class="table table-bordered table-striped">
+				<thead>
 					<tr>
-						<td><?php echo $value['alpha'] ?></td>
-						<td><?php echo $value['forecast'][0]['bicycle'] ?></td>
-						<td>X</td>
-						<td>X</td>
+						<th>ALPHA</th>
+						<th>ORANG</th>
+						<th>SEPEDA</th>
+						<th>MOBIL</th>
+						<th>MOTOR</th>
 					</tr>
-				<?php endforeach ?>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<?php for ($i = 0; $i < 9; $i++):?>
+						<tr>
+							<td>0.<?php echo $i+1; ?></td>
+							<td><?php echo $mape_20[$i]['person']['mape']; ?> %</td>
+							<td><?php echo $mape_20[$i]['bicycle']['mape']; ?> %</td>
+							<td><?php echo $mape_20[$i]['car']['mape']; ?> %</td>
+							<td><?php echo $mape_20[$i]['motorbike']['mape']; ?> %</td>
+						</tr>
+					<?php endfor; ?>
+				</tbody>
+			</table>
+		</div>
 	</div>
-</div>
-<br>
-<div class="row">
-	<div class="col-lg-6">
-		<h3 style="font-size: 17px">Mobil</h3>
-		<table id="table_peramalan_detail" class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Alpha</th>
-					<th>Peramalan</th>
-					<th>APE</th>
-					<th>MAPE</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach ($result_forecast as $value): ?>
+	<div class="tab-pane" id="mape3" role="tabpanel" aria-labelledby="mape3-tab">
+		<br>
+		<div class="col-lg-8">
+			<table id="table_peramalan_detail" class="table table-bordered table-striped">
+				<thead>
 					<tr>
-						<td><?php echo $value['alpha'] ?></td>
-						<td><?php echo $value['forecast'][0]['car'] ?></td>
-						<td>X</td>
-						<td>X</td>
+						<th>ALPHA</th>
+						<th>ORANG</th>
+						<th>SEPEDA</th>
+						<th>MOBIL</th>
+						<th>MOTOR</th>
 					</tr>
-				<?php endforeach ?>
-			</tbody>
-		</table>
-	</div>
-	<div class="col-lg-6">
-		<h3 style="font-size: 17px">Motor</h3>
-		<table id="table_peramalan_detail" class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Alpha</th>
-					<th>Peramalan</th>
-					<th>APE</th>
-					<th>MAPE</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach ($result_forecast as $value): ?>
-					<tr>
-						<td><?php echo $value['alpha'] ?></td>
-						<td><?php echo $value['forecast'][0]['motorbike'] ?></td>
-						<td>X</td>
-						<td>X</td>
-					</tr>
-				<?php endforeach ?>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<?php for ($i = 0; $i < 9; $i++):?>
+						<tr>
+							<td>0.<?php echo $i+1; ?></td>
+							<td><?php echo $mape_30[$i]['person']['mape']; ?> %</td>
+							<td><?php echo $mape_30[$i]['bicycle']['mape']; ?> %</td>
+							<td><?php echo $mape_30[$i]['car']['mape']; ?> %</td>
+							<td><?php echo $mape_30[$i]['motorbike']['mape']; ?> %</td>
+						</tr>
+					<?php endfor; ?>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
