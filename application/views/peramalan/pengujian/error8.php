@@ -28,7 +28,6 @@
                 <td><?php echo $error_alpha8['person']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8['person']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8['person']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -65,7 +64,6 @@
                 <td><?php echo $error_alpha8['bicycle']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8['bicycle']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8['bicycle']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -102,7 +100,6 @@
                 <td><?php echo $error_alpha8['car']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8['car']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8['car']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -139,7 +136,6 @@
                 <td><?php echo $error_alpha8['motorbike']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8['motorbike']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8['motorbike']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -188,7 +184,6 @@
                 <td><?php echo $error_alpha8_2['person']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_2['person']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_2['person']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -225,7 +220,6 @@
                 <td><?php echo $error_alpha8_2['bicycle']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_2['bicycle']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_2['bicycle']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -262,7 +256,6 @@
                 <td><?php echo $error_alpha8_2['car']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_2['car']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_2['car']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -299,7 +292,6 @@
                 <td><?php echo $error_alpha8_2['motorbike']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_2['motorbike']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_2['motorbike']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -348,7 +340,6 @@
                 <td><?php echo $error_alpha8_3['person']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_3['person']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_3['person']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -385,7 +376,6 @@
                 <td><?php echo $error_alpha8_3['bicycle']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_3['bicycle']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_3['bicycle']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -422,7 +412,6 @@
                 <td><?php echo $error_alpha8_3['car']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_3['car']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_3['car']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
@@ -459,7 +448,6 @@
                 <td><?php echo $error_alpha8_3['motorbike']['data'][$i]['error'] ?></td>
                 <td><?php echo $error_alpha8_3['motorbike']['data'][$i]['abs'] ?></td>
                 <td><?php echo $error_alpha8_3['motorbike']['data'][$i]['pe'] ?>%</td>
-                <td></td>
               </tr>
             <?php endfor; ?>
           </tbody>
