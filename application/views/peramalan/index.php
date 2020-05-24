@@ -163,56 +163,56 @@
                 <div class="tab-pane" id="error2" role="tabpanel" aria-labelledby="error2-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error2'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error3" role="tabpanel" aria-labelledby="error3-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error3'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error4" role="tabpanel" aria-labelledby="error4-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error4'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error5" role="tabpanel" aria-labelledby="error5-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error5'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error6" role="tabpanel" aria-labelledby="error6-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error6'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error7" role="tabpanel" aria-labelledby="error7-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error7'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error8" role="tabpanel" aria-labelledby="error8-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error8'); ?>
 
                   </div>
                 </div>
                 <div class="tab-pane" id="error9" role="tabpanel" aria-labelledby="error9-tab">
                   <br>
                   <div class="col-lg-8">
-                    <?php $this->load->view('peramalan/pengujian/error1'); ?>
+                    <?php $this->load->view('peramalan/pengujian/error9'); ?>
 
                   </div>
                 </div>
