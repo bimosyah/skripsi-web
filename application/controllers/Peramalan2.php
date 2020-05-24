@@ -125,6 +125,10 @@ class Peramalan2 extends CI_Controller {
 			array_push($error_result_menit_30, $data);
 		}
 
+		$min_mape_menit_10 = $this->minMape($error_result_menit_10);
+		$min_mape_menit_20 = $this->minMape($error_result_menit_20);
+		$min_mape_menit_30 = $this->minMape($error_result_menit_30);
+
 		$data['alpha1'] = $result_menit_10[0];
 		$data['alpha2'] = $result_menit_10[1];
 		$data['alpha3'] = $result_menit_10[2];
@@ -192,14 +196,49 @@ class Peramalan2 extends CI_Controller {
 		$data['mape_10'] = $error_result_menit_10;
 		$data['mape_20'] = $error_result_menit_20;
 		$data['mape_30'] = $error_result_menit_30;
+
+		$data['min_mape_menit_10'] = $min_mape_menit_10;
+		$data['min_mape_menit_20'] = $min_mape_menit_20;
+		$data['min_mape_menit_30'] = $min_mape_menit_30;
 		
 		$this->load->view('peramalan/index', $data);
 		// header('Content-Type: application/json');
-		// echo json_encode($data['mape_10']);
+		// echo json_encode($minMape);
 
 		// header('Content-Type: application/json');
 		// echo json_encode($error_result_menit_20);
 	}
+
+
+	public function minMape($error_result_menit)
+	{
+		$arr_mape_orang = array();
+		$arr_mape_sepeda = array();
+		$arr_mape_mobil = array();
+		$arr_mape_motor = array();
+
+		for ($i = 0; $i < 9; $i++) {
+			array_push($arr_mape_orang, $error_result_menit[$i]['person']['mape']);
+			array_push($arr_mape_sepeda, $error_result_menit[$i]['bicycle']['mape']);
+			array_push($arr_mape_mobil, $error_result_menit[$i]['car']['mape']);
+			array_push($arr_mape_motor, $error_result_menit[$i]['motorbike']['mape']);
+		}
+
+		$min_orang = min($arr_mape_orang);
+		$min_sepeda = min($arr_mape_sepeda);
+		$min_mobil = min($arr_mape_mobil);
+		$min_motor = min($arr_mape_motor);
+		
+		$array_mape_min = array(
+			'min_orang' => $min_orang,
+			'min_sepeda' => $min_sepeda,
+			'min_mobil' => $min_mobil,
+			'min_motor' => $min_motor 
+		);
+
+		return $array_mape_min;
+	}
+
 
 	public function getAlpha()
 	{

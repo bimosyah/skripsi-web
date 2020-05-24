@@ -17,20 +17,28 @@
 				<thead>
 					<tr>
 						<th>ALPHA</th>
-						<th>ORANG</th>
-						<th>SEPEDA</th>
-						<th>MOBIL</th>
-						<th>MOTOR</th>
+						<th>MAPE ORANG</th>
+						<th>MAPE SEPEDA</th>
+						<th>MAPE MOBIL</th>
+						<th>MAPE MOTOR</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php for ($i = 0; $i < 9; $i++):?>
 						<tr>
 							<td>0.<?php echo $i+1; ?></td>
-							<td><?php echo $mape_10[$i]['person']['mape']; ?> %</td>
-							<td><?php echo $mape_10[$i]['bicycle']['mape']; ?> %</td>
-							<td><?php echo $mape_10[$i]['car']['mape']; ?> %</td>
-							<td><?php echo $mape_10[$i]['motorbike']['mape']; ?> %</td>
+							<td <?php echo ($mape_10[$i]['person']['mape'] == $min_mape_menit_10['min_orang'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_10[$i]['person']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_10[$i]['bicycle']['mape'] == $min_mape_menit_10['min_sepeda'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_10[$i]['bicycle']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_10[$i]['car']['mape'] == $min_mape_menit_10['min_mobil'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_10[$i]['car']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_10[$i]['motorbike']['mape'] == $min_mape_menit_10['min_motor'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_10[$i]['motorbike']['mape']; ?> %
+							</td>
 						</tr>
 					<?php endfor; ?>
 				</tbody>
@@ -44,20 +52,28 @@
 				<thead>
 					<tr>
 						<th>ALPHA</th>
-						<th>ORANG</th>
-						<th>SEPEDA</th>
-						<th>MOBIL</th>
-						<th>MOTOR</th>
+						<th>MAPE ORANG</th>
+						<th>MAPE SEPEDA</th>
+						<th>MAPE MOBIL</th>
+						<th>MAPE MOTOR</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php for ($i = 0; $i < 9; $i++):?>
 						<tr>
 							<td>0.<?php echo $i+1; ?></td>
-							<td><?php echo $mape_20[$i]['person']['mape']; ?> %</td>
-							<td><?php echo $mape_20[$i]['bicycle']['mape']; ?> %</td>
-							<td><?php echo $mape_20[$i]['car']['mape']; ?> %</td>
-							<td><?php echo $mape_20[$i]['motorbike']['mape']; ?> %</td>
+							<td <?php echo ($mape_20[$i]['person']['mape'] == $min_mape_menit_20['min_orang'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_20[$i]['person']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_20[$i]['bicycle']['mape'] == $min_mape_menit_20['min_sepeda'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_20[$i]['bicycle']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_20[$i]['car']['mape'] == $min_mape_menit_20['min_mobil'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_20[$i]['car']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_20[$i]['motorbike']['mape'] == $min_mape_menit_20['min_motor'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_20[$i]['motorbike']['mape']; ?> %
+							</td>
 						</tr>
 					<?php endfor; ?>
 				</tbody>
@@ -71,20 +87,28 @@
 				<thead>
 					<tr>
 						<th>ALPHA</th>
-						<th>ORANG</th>
-						<th>SEPEDA</th>
-						<th>MOBIL</th>
-						<th>MOTOR</th>
+						<th>MAPE ORANG</th>
+						<th>MAPE SEPEDA</th>
+						<th>MAPE MOBIL</th>
+						<th>MAPE MOTOR</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php for ($i = 0; $i < 9; $i++):?>
 						<tr>
 							<td>0.<?php echo $i+1; ?></td>
-							<td><?php echo $mape_30[$i]['person']['mape']; ?> %</td>
-							<td><?php echo $mape_30[$i]['bicycle']['mape']; ?> %</td>
-							<td><?php echo $mape_30[$i]['car']['mape']; ?> %</td>
-							<td><?php echo $mape_30[$i]['motorbike']['mape']; ?> %</td>
+							<td <?php echo ($mape_30[$i]['person']['mape'] == $min_mape_menit_30['min_orang'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_30[$i]['person']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_30[$i]['bicycle']['mape'] == $min_mape_menit_30['min_sepeda'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_30[$i]['bicycle']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_30[$i]['car']['mape'] == $min_mape_menit_30['min_mobil'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_30[$i]['car']['mape']; ?> %
+							</td>
+							<td <?php echo ($mape_30[$i]['motorbike']['mape'] == $min_mape_menit_30['min_motor'] ? "style='background-color:#008000'" :"") ?>>
+								<?php echo $mape_30[$i]['motorbike']['mape']; ?> %
+							</td>
 						</tr>
 					<?php endfor; ?>
 				</tbody>
