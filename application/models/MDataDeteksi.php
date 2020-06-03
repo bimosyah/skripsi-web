@@ -15,6 +15,12 @@ class MDataDeteksi extends CI_Model {
 		return $query;
 	}
 
+	function save2($object)
+	{
+		$query = $this->db->insert('table_data_deteksi2', $object);
+		return $query;
+	}
+
 	function view_jumlah_per_hari()
 	{
 		$query = $this->db->get('view_jumlah_per_hari')->result();

@@ -53,7 +53,7 @@ class Data extends CI_Controller {
 				"jumlah_motorbike" => $jumlah_motorbike
 			);
 
-			$query = $this->deteksi->save($arr_jumlah);
+			$query = $this->deteksi->save2($arr_jumlah);
 			
 			if ($query) {
 				$result = array(
