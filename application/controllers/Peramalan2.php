@@ -409,7 +409,7 @@ class Peramalan2 extends CI_Controller {
 			
 			$error = $data_per_menit[$i]->jumlah_person - $forecast[$i]['person'];
 			$abs = abs($error);
-			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_person) * 100);
+			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_person, $abs) * 100);
 			$jumlah_pe += $pe;
 			
 			$temp = array(
@@ -440,7 +440,7 @@ class Peramalan2 extends CI_Controller {
 			
 			$error = $data_per_menit[$i]->jumlah_bicycle - $forecast[$i]['bicycle'];
 			$abs = abs($error);
-			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_bicycle) * 100);
+			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_bicycle, $abs) * 100);
 			$jumlah_pe += $pe;
 			
 			$temp = array(
@@ -471,7 +471,7 @@ class Peramalan2 extends CI_Controller {
 			
 			$error = $data_per_menit[$i]->jumlah_car - $forecast[$i]['car'];
 			$abs = abs($error);
-			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_car) * 100);
+			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_car, $abs) * 100);
 			$jumlah_pe += $pe;
 			
 			$temp = array(
@@ -502,7 +502,7 @@ class Peramalan2 extends CI_Controller {
 			
 			$error = $data_per_menit[$i]->jumlah_motorbike - $forecast[$i]['motorbike'];
 			$abs = abs($error);
-			$pe = ($i == 0 ? 0 : ($abs / $data_per_menit[$i]->jumlah_motorbike) * 100);
+			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_motorbike, $abs) * 100);
 			$jumlah_pe += $pe;
 			
 			$temp = array(
@@ -522,6 +522,15 @@ class Peramalan2 extends CI_Controller {
 		);
 
 		return $data;
+	}
+
+	public function iferror($volume,$abs)
+	{
+		if ($volume == 0) {
+			return 0;
+		}else {
+			return $abs/$volume;
+		}
 	}
 
 }
