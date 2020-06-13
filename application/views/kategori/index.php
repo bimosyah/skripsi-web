@@ -7,14 +7,14 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Data Kendaraan</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Object Detection</h3>
             </div>
             <div class="card-body">
               <table id="table_kategori" class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>Nama Kategori</th>
+                    <th>Object Name</th>
                   </tr>
                 </thead>
                 <tbody>
