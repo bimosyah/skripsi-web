@@ -17,7 +17,7 @@
             <a href="<?php echo base_url('peramalan') ?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Peramalan
+                Forecasting
               </p>
             </a>
           </li>
@@ -34,7 +34,7 @@
               <li class="nav-item">
                 <a href="<?php echo base_url('kategori') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Kategori</p>
+                  <p>Category</p>
                 </a>
               </li>
             </ul>
@@ -42,7 +42,7 @@
               <li class="nav-item">
                 <a href="<?php echo base_url('data-deteksi') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Deteksi</p>
+                  <p>Detection Data</p>
                 </a>
               </li>
             </ul>

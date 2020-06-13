@@ -34,28 +34,28 @@
 		data: {
 			labels: <?php echo (!isset($label) ? "[]" : json_encode($label)) ?>,
 			datasets: [{
-				label: 'Orang',
+				label: 'Person',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
 				data: <?php echo (!isset($jumlah_manusia) ? "[]" : json_encode($jumlah_manusia)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Sepeda',
+				label: 'Bicycle',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
 				data: <?php echo (!isset($jumlah_sepeda) ? "[]" : json_encode($jumlah_sepeda)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Mobil',
+				label: 'Car',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
 				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Motor',
+				label: 'Motorcycle',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
 				data: <?php echo (!isset($jumlah_motor) ? "[]" : json_encode($jumlah_motor)) ?>,
@@ -81,7 +81,7 @@
 					display: true,
 					scaleLabel: {
 						display: true,
-						labelString: 'Tanggal'
+						labelString: 'Date'
 					}
 				}],
 				yAxes: [{
@@ -101,28 +101,28 @@
 		data: {
 			labels: <?php echo (!isset($label_menit10) ? "[]" : json_encode($label_menit10)) ?>,
 			datasets: [{
-				label: 'Orang',
+				label: 'Person',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
 				data: <?php echo (!isset($jumlah_manusia_menit10) ? "[]" : json_encode($jumlah_manusia_menit10)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Sepeda',
+				label: 'Bicycle',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
 				data: <?php echo (!isset($jumlah_sepeda_menit10) ? "[]" : json_encode($jumlah_sepeda_menit10)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Mobil',
+				label: 'Car',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
 				data: <?php echo (!isset($jumlah_mobil_menit10) ? "[]" : json_encode($jumlah_mobil_menit10)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Motor',
+				label: 'Motorcycle',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
 				data: <?php echo (!isset($jumlah_motor_menit10) ? "[]" : json_encode($jumlah_motor_menit10)) ?>,
@@ -133,7 +133,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Volume Data Jam 08.10'
+				text: 'Data in 08.10'
 			},
 			tooltips: {
 				mode: 'index',
@@ -148,7 +148,7 @@
 					display: true,
 					scaleLabel: {
 						display: true,
-						labelString: 'Tanggal'
+						labelString: 'Date'
 					}
 				}],
 				yAxes: [{
@@ -168,28 +168,28 @@
 		data: {
 			labels: <?php echo (!isset($label_menit20) ? "[]" : json_encode($label_menit20)) ?>,
 			datasets: [{
-				label: 'Orang',
+				label: 'Person',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
 				data: <?php echo (!isset($jumlah_manusia_menit20) ? "[]" : json_encode($jumlah_manusia_menit20)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Sepeda',
+				label: 'Bicycle',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
 				data: <?php echo (!isset($jumlah_sepeda_menit20) ? "[]" : json_encode($jumlah_sepeda_menit20)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Mobil',
+				label: 'Car',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
 				data: <?php echo (!isset($jumlah_mobil_menit20) ? "[]" : json_encode($jumlah_mobil_menit20)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Motor',
+				label: 'Motorcycle',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
 				data: <?php echo (!isset($jumlah_motor_menit20) ? "[]" : json_encode($jumlah_motor_menit20)) ?>,
@@ -200,7 +200,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Volume Data Jam 08.20'
+				text: 'Data in 08.20'
 			},
 			tooltips: {
 				mode: 'index',
@@ -215,7 +215,7 @@
 					display: true,
 					scaleLabel: {
 						display: true,
-						labelString: 'Tanggal'
+						labelString: 'Date'
 					}
 				}],
 				yAxes: [{
@@ -235,28 +235,28 @@
 		data: {
 			labels: <?php echo (!isset($label_menit30) ? "[]" : json_encode($label_menit30)) ?>,
 			datasets: [{
-				label: 'Orang',
+				label: 'Person',
 				backgroundColor: 'rgb(255, 102, 102)',
 				borderColor: 'rgb(255, 102, 102)',
 				data: <?php echo (!isset($jumlah_manusia_menit30) ? "[]" : json_encode($jumlah_manusia_menit30)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Sepeda',
+				label: 'Bicycle',
 				backgroundColor: 'rgb(255, 178, 102)',
 				borderColor: 'rgb(255, 178, 102)',
 				data: <?php echo (!isset($jumlah_sepeda_menit30) ? "[]" : json_encode($jumlah_sepeda_menit30)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Mobil',
+				label: 'Car',
 				backgroundColor: 'rgb(255, 255, 102)',
 				borderColor: 'rgb(255, 255, 102)',
 				data: <?php echo (!isset($jumlah_mobil_menit30) ? "[]" : json_encode($jumlah_mobil_menit30)) ?>,
 				fill: false,
 			},
 			{
-				label: 'Motor',
+				label: 'Motorcycle',
 				backgroundColor: 'rgb(178, 255, 102)',
 				borderColor: 'rgb(178, 255, 102)',
 				data: <?php echo (!isset($jumlah_motor_menit30) ? "[]" : json_encode($jumlah_motor_menit30)) ?>,
@@ -267,7 +267,7 @@
 			responsive: true,
 			title: {
 				display: true,
-				text: 'Volume Data Jam 08.30'
+				text: 'Data in 08.30'
 			},
 			tooltips: {
 				mode: 'index',
@@ -282,7 +282,7 @@
 					display: true,
 					scaleLabel: {
 						display: true,
-						labelString: 'Tanggal'
+						labelString: 'Date'
 					}
 				}],
 				yAxes: [{

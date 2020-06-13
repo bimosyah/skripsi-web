@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header">
       <a class="card-link" data-toggle="collapse" href="#collapse1">
-        Jam 08:10
+        08:10
       </a>
     </div>
     <div id="collapse1" class="collapse" data-parent="#accordion2">
@@ -12,8 +12,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR Orang</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Person</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -33,7 +33,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9['person']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -48,8 +48,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR SEPEDA</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Bicycke</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -69,7 +69,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9['bicycle']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -84,8 +84,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR MOBIL</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Car</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -105,7 +105,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9['car']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -120,8 +120,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR MOTOR</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Motorcycle</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -141,7 +141,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9['motorbike']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -158,7 +158,7 @@
   <div class="card">
     <div class="card-header">
       <a class="card-link" data-toggle="collapse" href="#collapse2">
-        Jam 08:20
+        08:20
       </a>
     </div>
     <div id="collapse2" class="collapse" data-parent="#accordion2">
@@ -168,8 +168,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR Orang</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Person</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -189,7 +189,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_2['person']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -204,8 +204,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR SEPEDA</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Bicycke</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -225,7 +225,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_2['bicycle']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -240,8 +240,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR MOBIL</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Car</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -261,7 +261,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_2['car']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -276,8 +276,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR MOTOR</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Motorcycle</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -297,7 +297,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_2['motorbike']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -314,7 +314,7 @@
   <div class="card">
     <div class="card-header">
       <a class="card-link" data-toggle="collapse" href="#collapse3">
-        Jam 08:30
+        08:30
       </a>
     </div>
     <div id="collapse3" class="collapse" data-parent="#accordion2">
@@ -324,8 +324,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR Orang</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Person</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -345,7 +345,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_3['person']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -360,8 +360,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR SEPEDA</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Bicycke</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -381,7 +381,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_3['bicycle']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -396,8 +396,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR MOBIL</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Car</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -417,7 +417,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_3['car']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>
@@ -432,8 +432,8 @@
         <table id="table_peramalan_detail" class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th rowspan="2" style="text-align: center;">Tanggal</th>
-              <th colspan="3" style="text-align: center;">ERROR MOTOR</th>
+              <th rowspan="2" style="text-align: center;">Date</th>
+              <th colspan="3" style="text-align: center;">ERROR Motorcycle</th>
             </tr>
             <tr>
               <th>ERROR</th>
@@ -453,7 +453,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="3" style="text-align: right;">JUMLAH PE</th>
+              <th colspan="3" style="text-align: right;">&Sigma; PE</th>
               <th><?php echo $error_alpha9_3['motorbike']['jumlah_pe'] ?>%</th>
             </tr>
             <tr>

@@ -17,10 +17,10 @@
 				<thead>
 					<tr>
 						<th>ALPHA</th>
-						<th>MAPE ORANG</th>
-						<th>MAPE SEPEDA</th>
-						<th>MAPE MOBIL</th>
-						<th>MAPE MOTOR</th>
+						<th>MAPE PERSON</th>
+						<th>MAPE BICYCLE</th>
+						<th>MAPE CAR</th>
+						<th>MAPE MOTORBIKE</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -52,10 +52,10 @@
 				<thead>
 					<tr>
 						<th>ALPHA</th>
-						<th>MAPE ORANG</th>
-						<th>MAPE SEPEDA</th>
-						<th>MAPE MOBIL</th>
-						<th>MAPE MOTOR</th>
+						<th>MAPE PERSON</th>
+						<th>MAPE BICYCLE</th>
+						<th>MAPE CAR</th>
+						<th>MAPE MOTORBIKE</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -87,10 +87,10 @@
 				<thead>
 					<tr>
 						<th>ALPHA</th>
-						<th>MAPE ORANG</th>
-						<th>MAPE SEPEDA</th>
-						<th>MAPE MOBIL</th>
-						<th>MAPE MOTOR</th>
+						<th>MAPE PERSON</th>
+						<th>MAPE BICYCLE</th>
+						<th>MAPE CAR</th>
+						<th>MAPE MOTORBIKE</th>
 					</tr>
 				</thead>
 				<tbody>

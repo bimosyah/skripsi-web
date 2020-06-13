@@ -7,7 +7,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Grafik Volume Data</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Volume Data</h3>
             </div>
             <div class="card-body">
               <canvas id="canvas"></canvas>
@@ -17,7 +17,7 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Grafik Volume Berdasarkan Waktu</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Time-Based Volume</h3>
             </div>
             <div class="card-body">
               <div class="row">

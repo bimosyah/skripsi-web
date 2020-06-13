@@ -7,17 +7,17 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Jumlah Data Deteksi</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Detection Data per Day</h3>
             </div>
             <div class="card-body">
               <table id="table_peramalan_detail" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Tanggal</th>
-                    <th>Orang</th>
-                    <th>Sepeda</th>
-                    <th>Mobil</th>
-                    <th>Motor</th>
+                    <th>Date</th>
+                    <th>Person</th>
+                    <th>Bicycle</th>
+                    <th>Car</th>
+                    <th>Motorcycle</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -38,18 +38,18 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Data Deteksi</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>etection Data</h3>
             </div>
             <div class="card-body">
               <table id="table_data_deteksi" class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th>jumlah_person</th>
-                    <th>jumlah_bicycle</th>
-                    <th>jumlah_car</th>
-                    <th>jumlah_motorbike</th>
-                    <th>timestamp</th>
+                    <th>Person</th>
+                    <th>Bicycle</th>
+                    <th>Car</th>
+                    <th>Motorbike</th>
+                    <th>Time</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -3,7 +3,7 @@
   <div class="card">
     <div class="card-header">
       <a class="card-link" data-toggle="collapse" href="#collapseOne">
-        Jam 08:10
+        08:10
       </a>
     </div>
     <div id="collapseOne" class="collapse " data-parent="#accordion">
@@ -14,16 +14,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Orang</th>
+              <th colspan="5" style="text-align: center;">Person</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -41,7 +41,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3['forecast'][7]['person']; ?></th>
           </tfoot>
         </table>  
@@ -53,16 +53,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Sepedah</th>
+              <th colspan="5" style="text-align: center;">Bicycle</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -80,7 +80,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3['forecast'][7]['bicycle']; ?></th>
           </tfoot>
         </table>
@@ -92,16 +92,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Mobil</th>
+              <th colspan="5" style="text-align: center;">Car</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -119,7 +119,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3['forecast'][7]['car']; ?></th>
           </tfoot>
         </table>
@@ -132,16 +132,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Motor</th>
+              <th colspan="5" style="text-align: center;">Motorcycle</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -159,7 +159,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3['forecast'][7]['motorbike']; ?></th>
           </tfoot>
         </table>
@@ -170,7 +170,7 @@
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Jam 08:20
+        08:20
       </a>
     </div>
     <div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -181,16 +181,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Orang</th>
+              <th colspan="5" style="text-align: center;">Person</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -208,7 +208,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_2['forecast'][7]['person']; ?></th>
           </tfoot>
         </table>  
@@ -220,16 +220,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Sepedah</th>
+              <th colspan="5" style="text-align: center;">Bicycle</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -247,7 +247,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_2['forecast'][7]['bicycle']; ?></th>
           </tfoot>
         </table>
@@ -259,16 +259,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Mobil</th>
+              <th colspan="5" style="text-align: center;">Car</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -286,7 +286,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_2['forecast'][7]['car']; ?></th>
           </tfoot>
         </table>
@@ -299,16 +299,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Motor</th>
+              <th colspan="5" style="text-align: center;">Motorcycle</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -326,7 +326,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_2['forecast'][7]['motorbike']; ?></th>
           </tfoot>
         </table>
@@ -337,7 +337,7 @@
   <div class="card">
     <div class="card-header">
       <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-        Jam 08:30
+        08:30
       </a>
     </div>
     <div id="collapseThree" class="collapse" data-parent="#accordion">
@@ -348,16 +348,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Orang</th>
+              <th colspan="5" style="text-align: center;">Person</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -375,7 +375,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_3['forecast'][7]['person']; ?></th>
           </tfoot>
         </table>  
@@ -387,16 +387,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Sepedah</th>
+              <th colspan="5" style="text-align: center;">Bicycle</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -414,7 +414,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_3['forecast'][7]['bicycle']; ?></th>
           </tfoot>
         </table>
@@ -426,16 +426,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Mobil</th>
+              <th colspan="5" style="text-align: center;">Car</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -453,7 +453,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_3['forecast'][7]['car']; ?></th>
           </tfoot>
         </table>
@@ -466,16 +466,16 @@
             <tr>
               <th>Alpha</th>
               <th>0.3</th>
-              <th colspan="5" style="text-align: center;">Motor</th>
+              <th colspan="5" style="text-align: center;">Motorcycle</th>
             </tr>
             <tr>
-              <th>Tanggal</th>
+              <th>Date</th>
               <th>Volume Y(t)</th>
               <th>S1 (S't)</th>
               <th>S2 (S''t)</th>
-              <th>Nilai At</th>
-              <th>Nilai Bt</th>
-              <th>Peramalan</th>
+              <th>At</th>
+              <th>Bt</th>
+              <th>Forecasting</th>
             </tr>
           </thead>
           <tbody>
@@ -493,7 +493,7 @@
             <?php endfor; ?>
           </tbody>
           <tfoot>
-            <th colspan="6" style="text-align: right;">Hasil Peramalan hari berikutnya dengan alpha 0,3 = </th>
+            <th colspan="6" style="text-align: right;">Forecasting result for the next day using alpha 0,3 = </th>
             <th><?php echo $alpha3_3['forecast'][7]['motorbike']; ?></th>
           </tfoot>
         </table>
