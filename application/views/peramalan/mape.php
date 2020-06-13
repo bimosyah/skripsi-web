@@ -20,7 +20,7 @@
 						<th>MAPE PERSON</th>
 						<th>MAPE BICYCLE</th>
 						<th>MAPE CAR</th>
-						<th>MAPE MOTORBIKE</th>
+						<th>MAPE MOTORCYCLE</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -55,7 +55,7 @@
 						<th>MAPE PERSON</th>
 						<th>MAPE BICYCLE</th>
 						<th>MAPE CAR</th>
-						<th>MAPE MOTORBIKE</th>
+						<th>MAPE MOTORCYCLE</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -90,7 +90,7 @@
 						<th>MAPE PERSON</th>
 						<th>MAPE BICYCLE</th>
 						<th>MAPE CAR</th>
-						<th>MAPE MOTORBIKE</th>
+						<th>MAPE MOTORCYCLE</th>
 					</tr>
 				</thead>
 				<tbody>
