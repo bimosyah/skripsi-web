@@ -407,7 +407,7 @@ class Peramalan2 extends CI_Controller {
 		$mape = 0;
 		for ($i = 0; $i < 7; $i++) {
 			
-			$error = $data_per_menit[$i]->jumlah_person - $forecast[$i]['person'];
+			$error = $data_per_menit[$i]->jumlah_person - $forecast[$i+1]['person'];
 			$abs = abs($error);
 			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_person, $abs) * 100);
 			$jumlah_pe += $pe;
@@ -438,7 +438,7 @@ class Peramalan2 extends CI_Controller {
 		$mape = 0;
 		for ($i = 0; $i < 7; $i++) {
 			
-			$error = $data_per_menit[$i]->jumlah_bicycle - $forecast[$i]['bicycle'];
+			$error = $data_per_menit[$i]->jumlah_bicycle - $forecast[$i+1]['bicycle'];
 			$abs = abs($error);
 			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_bicycle, $abs) * 100);
 			$jumlah_pe += $pe;
@@ -469,7 +469,7 @@ class Peramalan2 extends CI_Controller {
 		$mape = 0;
 		for ($i = 0; $i < 7; $i++) {
 			
-			$error = $data_per_menit[$i]->jumlah_car - $forecast[$i]['car'];
+			$error = $data_per_menit[$i]->jumlah_car - $forecast[$i+1]['car'];
 			$abs = abs($error);
 			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_car, $abs) * 100);
 			$jumlah_pe += $pe;
@@ -500,7 +500,7 @@ class Peramalan2 extends CI_Controller {
 		$mape = 0;
 		for ($i = 0; $i < 7; $i++) {
 			
-			$error = $data_per_menit[$i]->jumlah_motorbike - $forecast[$i]['motorbike'];
+			$error = $data_per_menit[$i]->jumlah_motorbike - $forecast[$i+1]['motorbike'];
 			$abs = abs($error);
 			$pe = ($i == 0 ? 0 : $this->iferror($data_per_menit[$i]->jumlah_motorbike, $abs) * 100);
 			$jumlah_pe += $pe;
