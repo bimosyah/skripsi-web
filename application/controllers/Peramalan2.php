@@ -389,10 +389,10 @@ class Peramalan2 extends CI_Controller {
 			$motorbike = $konstantaA[$i]['motorbike'] + $konstantaB[$i]['motorbike']; 	
 
 			$data = array(
-				'person' => round($person,3, PHP_ROUND_HALF_DOWN),
-				'bicycle' => round($bicycle,3, PHP_ROUND_HALF_DOWN),
-				'car' => round($car,3, PHP_ROUND_HALF_DOWN),
-				'motorbike' => round($motorbike,3, PHP_ROUND_HALF_DOWN)
+				'person' => round($person),
+				'bicycle' => round($bicycle),
+				'car' => round($car),
+				'motorbike' => round($motorbike)
 			);
 			array_push($result, $data);
 		}
