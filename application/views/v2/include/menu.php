@@ -21,14 +21,6 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('peramalan2') ?>" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Forecasting 2
-              </p>
-            </a>
-          </li>
           <li class="nav-header">DATA</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
