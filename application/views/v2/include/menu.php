@@ -13,14 +13,40 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('peramalan') ?>" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-server"></i>
               <p>
                 Forecasting
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-          </li>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('peramalan/waktu1') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Forecasting 8:10</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('peramalan/waktu2') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Forecasting 8:20</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?php echo base_url('peramalan/waktu3') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Forecasting 8:30</p>
+                </a>
+              </li>
+            </ul>
+          </li>          
+
           <li class="nav-header">DATA</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

@@ -6,19 +6,13 @@ class DataDeteksi extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('MDataDeteksi','deteksi');
+		$this->load->model('v2/MDataDeteksi','deteksi');
 	}
 
 	public function index()
 	{
-		$data['raw_data'] = $this->getAllData();
 		$data['data_deteksi'] = $this->deteksi->get();
-		$this->load->view('data_deteksi/index', $data);			
-	}
-
-	public function getAllData(){
-		$raw_data = $this->deteksi->view_jumlah_per_hari();
-		return $raw_data;
+		$this->load->view('v2/data_deteksi/index', $data);			
 	}
 
 }

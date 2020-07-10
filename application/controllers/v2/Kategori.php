@@ -11,8 +11,7 @@ class Kategori extends CI_Controller {
 
 	public function index()
 	{
-		$data['kategori'] = $this->kategori->get();
-		$this->load->view('v2/kategori/index', $data);
+		$this->load->view('v2/kategori/index');
 	}
 
 }

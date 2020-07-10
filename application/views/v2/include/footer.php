@@ -26,7 +26,6 @@
 			"bPaginate": false,
 			"ordering": false
 		});
-
 	});
 
 	var config = {
@@ -36,8 +35,8 @@
 			datasets: [
 			{
 				label: 'Car',
-				backgroundColor: 'rgb(255, 255, 102)',
-				borderColor: 'rgb(255, 255, 102)',
+				backgroundColor: 'rgb(50, 78, 168)',
+				borderColor: 'rgb(50, 78, 168)',
 				data: <?php echo (!isset($jumlah_mobil) ? "[]" : json_encode($jumlah_mobil)) ?>,
 				fill: false,
 			}]
@@ -83,8 +82,8 @@
 			datasets: [
 			{
 				label: 'Car',
-				backgroundColor: 'rgb(255, 255, 102)',
-				borderColor: 'rgb(255, 255, 102)',
+				backgroundColor: 'rgb(50, 78, 168)',
+				borderColor: 'rgb(50, 78, 168)',
 				data: <?php echo (!isset($jumlah_mobil_menit10) ? "[]" : json_encode($jumlah_mobil_menit10)) ?>,
 				fill: false,
 			}]
@@ -130,8 +129,8 @@
 			datasets: [
 			{
 				label: 'Car',
-				backgroundColor: 'rgb(255, 255, 102)',
-				borderColor: 'rgb(255, 255, 102)',
+				backgroundColor: 'rgb(50, 78, 168)',
+				borderColor: 'rgb(50, 78, 168)',
 				data: <?php echo (!isset($jumlah_mobil_menit20) ? "[]" : json_encode($jumlah_mobil_menit20)) ?>,
 				fill: false,
 			}]
@@ -177,8 +176,8 @@
 			datasets: [
 			{
 				label: 'Car',
-				backgroundColor: 'rgb(255, 255, 102)',
-				borderColor: 'rgb(255, 255, 102)',
+				backgroundColor: 'rgb(50, 78, 168)',
+				borderColor: 'rgb(50, 78, 168)',
 				data: <?php echo (!isset($jumlah_mobil_menit30) ? "[]" : json_encode($jumlah_mobil_menit30)) ?>,
 				fill: false,
 			}]
@@ -229,6 +228,6 @@
 	};
 
 </script>
-
+<?php ($this->uri->segment(1) == "peramalan" ? $this->load->view('v2/include/chart_forecast') : ""); ?>
 </body>
 </html>

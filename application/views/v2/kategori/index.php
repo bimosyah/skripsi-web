@@ -1,4 +1,4 @@
-<?php $this->load->view('include/header'); ?>
+<?php $this->load->view('v2/include/header'); ?>
 
 <div class="content-wrapper">
   <div class="content-header">
@@ -18,13 +18,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($kategori as $value): ?>
-                    <tr>
-                      <th><?php echo $value->id ?></th>
-                      <th><?php echo $value->nama_kategori ?></th>
-                    </tr>
-                    <?php ($value->nama_kategori == "car" ? break:continue) ?>
-                  <?php endforeach; ?>
+                  <tr>
+                    <th>1</th>
+                    <th>Car</th>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -33,4 +30,4 @@
       </div>
     </div>
 
-    <?php $this->load->view('include/footer'); ?>
+    <?php $this->load->view('v2/include/footer'); ?>
