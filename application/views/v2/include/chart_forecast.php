@@ -7,6 +7,7 @@
 	$(function () {
 		$('#table_forecast').dataTable( {});
 		$('#table_error').dataTable( {});
+		$('#table_mape').dataTable( {});
 
 	});
 
@@ -87,6 +88,17 @@
 				document.getElementById("pe").innerHTML = json.error['pe'];
 				document.getElementById("mape").innerHTML = json.error['mape'];
 
+				$('#table_mape').DataTable().destroy();
+				$('#table_mape').dataTable({
+					"paging": false,
+					"data": json.mape,
+					"dataSrc": "mape",
+					"columns": [
+					{ data: "no" },
+					{ data: "alpha" },
+					{ data: "mape" },
+					]
+				});
 
 				chart_label = json.chart['label'];
 				chart_real = json.chart['chart_real'];

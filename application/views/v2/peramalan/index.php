@@ -58,7 +58,7 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Mape</h3>
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Error</h3>
             </div>
             <div class="card-body">
               <table id="table_error" class="table table-bordered text-nowrap">
@@ -69,12 +69,6 @@
                   <th>PE</th>
                 </thead>
                 <tbody>
-                  <tr>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>1</td>
-                      <td>1</td>
-                    </tr>
                 </tbody>
                 <tfoot>
                   <tr>
@@ -91,13 +85,32 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="margin-top: -50px">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>Graph</h3>
             </div>
             <div class="card-body">
               <canvas id="canvas_forecast"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"><i class="fas fa-chart-pie mr-1"></i>MAPE Result</h3>
+            </div>
+            <div class="card-body">
+              <table id="table_mape" class="table table-bordered text-nowrap">
+                <thead>
+                  <th>No</th>
+                  <th>Alpha</th>
+                  <th>Result</th>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
